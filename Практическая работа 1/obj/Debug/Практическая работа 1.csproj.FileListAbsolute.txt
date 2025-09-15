@@ -1,0 +1,15 @@
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\bin\Debug\Практическая работа 1.exe.config
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\bin\Debug\Практическая работа 1.exe
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\bin\Debug\Практическая работа 1.pdb
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\obj\Debug\Практическая работа 1.csproj.AssemblyReference.cache
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\obj\Debug\MainWindow.g.cs
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\obj\Debug\App.g.cs
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\obj\Debug\Практическая работа 1_MarkupCompile.cache
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\obj\Debug\Практическая работа 1_MarkupCompile.lref
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\obj\Debug\MainWindow.baml
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\obj\Debug\Практическая работа 1.g.resources
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\obj\Debug\Практическая_работа_1.Properties.Resources.resources
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\obj\Debug\Практическая работа 1.csproj.GenerateResource.cache
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\obj\Debug\Практическая работа 1.csproj.CoreCompileInputs.cache
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\obj\Debug\Практическая работа 1.exe
+C:\Users\vanomorodellefake\source\repos\Практическая работа 1\obj\Debug\Практическая работа 1.pdb
