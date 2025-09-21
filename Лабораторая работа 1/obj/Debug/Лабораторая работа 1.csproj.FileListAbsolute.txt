@@ -13,3 +13,19 @@ C:\Users\vanomorodellefake\source\repos\Лабораторая работа 1\ob
 C:\Users\vanomorodellefake\source\repos\Лабораторая работа 1\obj\Debug\Лабораторая работа 1.csproj.CoreCompileInputs.cache
 C:\Users\vanomorodellefake\source\repos\Лабораторая работа 1\obj\Debug\Лабораторая работа 1.exe
 C:\Users\vanomorodellefake\source\repos\Лабораторая работа 1\obj\Debug\Лабораторая работа 1.pdb
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\bin\Debug\Лабораторая работа 1.exe.config
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\bin\Debug\Лабораторая работа 1.exe
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\bin\Debug\Лабораторая работа 1.pdb
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\obj\Debug\Лабораторая работа 1.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\obj\Debug\Лабораторая работа 1.exe.config
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\obj\Debug\App.g.cs
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\obj\Debug\Лабораторая работа 1_MarkupCompile.cache
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\obj\Debug\Лабораторая работа 1_MarkupCompile.lref
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\obj\Debug\Лабораторая работа 1.g.resources
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\obj\Debug\Лабораторая_работа_1.Properties.Resources.resources
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\obj\Debug\Лабораторая работа 1.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\obj\Debug\Лабораторая работа 1.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\obj\Debug\Лабораторая работа 1.exe
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторая работа 1\obj\Debug\Лабораторая работа 1.pdb

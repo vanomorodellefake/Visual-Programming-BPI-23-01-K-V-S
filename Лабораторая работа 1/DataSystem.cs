@@ -8,10 +8,10 @@ namespace Лабораторая_работа_1
 {
     public class DataSystem
     {
-        private int _hour;
-        private int _minutes;
-        private int _seconds;
-        private int _secondsToAdd;
+        //private int _hour;
+        //private int _minutes;
+        //private int _seconds;
+        //private int _secondsToAdd;
 
         public int _Hour { get; set; }
         public int _Minutes { get; set; }
