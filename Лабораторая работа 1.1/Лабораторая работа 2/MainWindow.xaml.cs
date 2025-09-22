@@ -47,17 +47,17 @@ namespace Лабораторая_работа_2
             int selectedIndex = ChooseOfFunction.SelectedIndex;
             switch (selectedIndex)
             {
-                case 1:
+                case 0:
                     _BaseFunction = new SinFunction(_Coefficient);
                     //MessageBox.Show(Convert.ToString(sinFunction.Calculate(_ZnachPerem)), "Значение функции");
                     break;
 
-                case 2:
+                case 1:
                     _BaseFunction = new CosFunction(_Coefficient);
                     //MessageBox.Show(Convert.ToString(cosFunction.Calculate(_ZnachPerem)), "Значение функции");
                     break;
 
-                case 3:
+                case 2:
                     _BaseFunction = new TanFunction(_Coefficient);
                     //MessageBox.Show(Convert.ToString(tanFunction.Calculate(_ZnachPerem)), "Значение функции");
                     break;
@@ -67,6 +67,8 @@ namespace Лабораторая_работа_2
         private void CreateDerivative(object sender, RoutedEventArgs e)
         {
             if (!CheckZero()) { return; }
+
+            if (ChooseOfFunction.SelectedIndex == 2) { return; }
 
             CreateCurrentFunction();
 
@@ -80,7 +82,17 @@ namespace Лабораторая_работа_2
 
         private void SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            int selectedIndex = ChooseOfFunction.SelectedIndex;
+            if (selectedIndex == 2)
+            {
+                Derivative.Background = Brushes.DarkRed;
+                Derivative.ToolTip = "Данный функционал не доступен для тангенса";
+            }
+            else
+            {
+                Derivative.Background = Brushes.LightGray;
+                Derivative.ToolTip = null;
+            }
         }
 
         private void TextBox_Checker(object sender, KeyEventArgs e)
@@ -95,7 +107,7 @@ namespace Лабораторая_работа_2
             bool SelectionError = false;
             bool DataError = false;
 
-            if (ChooseOfFunction.SelectedIndex <= 0)
+            if (ChooseOfFunction.SelectedIndex < 0)
             {
                 SelectionError = true;
             }
@@ -127,7 +139,7 @@ namespace Лабораторая_работа_2
         }
         private void UpdateData()
         {
-            _Coefficient = Convert.ToDouble(Coefficient.Text);
+            _Coefficient = 1;
             _ZnachPerem = Convert.ToDouble(znach_peremen.Text);
 
             //MessageBox.Show($"{_Coefficient} = {_ZnachPerem}", "Тест");

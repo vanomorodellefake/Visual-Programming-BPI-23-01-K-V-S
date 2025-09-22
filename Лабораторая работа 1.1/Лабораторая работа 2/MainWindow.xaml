@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Лабораторая_работа_2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="150" Width="800">
+        Title="MainWindow" Height="150" Width="800" MaxHeight="150" MaxWidth="800" MinHeight="150" MinWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -16,9 +16,9 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
-
+        
+        <!---
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -32,8 +32,8 @@
                 x:Name="Coefficient"
                 PreviewKeyDown="TextBox_Checker"/>
         </Grid>
-
-        <Grid Grid.Row="1">
+        -->
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="133*"/>
                 <ColumnDefinition Width="24*"/>
@@ -49,13 +49,13 @@
 
         <Button 
             Background="SlateGray"
-            Grid.Row="2"
+            Grid.Row="1"
             Content="Выберите тип функции:"/>
 
         <ComboBox 
-            Grid.Row="3"
+            Grid.Row="2"
             x:Name="ChooseOfFunction"
-            SelectionChanged="SelectionChanged">>
+            SelectionChanged="SelectionChanged">
             <ComboBoxItem>Синус</ComboBoxItem>
             <ComboBoxItem>Косинус</ComboBoxItem>
             <ComboBoxItem>Тангенс</ComboBoxItem>
@@ -70,7 +70,8 @@
             Grid.Column="2" 
             Grid.RowSpan="4" 
             Content="Создать производную экземпляра"
-            Click="CreateDerivative"/>
+            Click="CreateDerivative"
+            x:Name="Derivative"/>
 
     </Grid>
 </Window>

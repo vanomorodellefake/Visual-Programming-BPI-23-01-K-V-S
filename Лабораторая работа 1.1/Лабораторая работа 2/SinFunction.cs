@@ -18,5 +18,9 @@ namespace Лабораторая_работа_2
         {
             return new CosFunction(_Coefficient);
         }
+        public override string ToString()
+        {
+            return $"Sin({x})";
+        }
     }
 }
