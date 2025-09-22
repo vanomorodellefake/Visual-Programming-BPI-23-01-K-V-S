@@ -9,7 +9,6 @@ namespace Лабораторая_работа_2
     public abstract class BaseFunction
     {
         public double _Coefficient {  get; set; }
-        public double _Znach { get; set; }
 
         public BaseFunction(double _coefficient)
         {
