@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Лабораторная_работа_2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="430" Width="430">
+        Title="MainWindow" Height="565" Width="430" MinHeight="565" MinWidth="430">
     <StackPanel>
         
         <RadioButton 
@@ -39,7 +39,7 @@
                             Grid.Row="0"
                             MinWidth="70"
                             Name="R1TextA"
-                            PreviewKeyDown="TextBox_Checker"/>
+                            PreviewKeyDown = "TextBox_Checker"/>
                         <Label
                             Content="f"
                             Grid.Column="0"
@@ -67,7 +67,7 @@
             Checked="RadioButton_Checked">
             <StackPanel>
                 <Image
-                    Height="30"
+                    Height="31"
                     Source="Resources/p2.png"/>
                 <GroupBox
                     Header="Parameters">
@@ -79,14 +79,14 @@
                             Text="0,00"
                             MinWidth="70"
                             Name="R2TextA"
-                            PreviewKeyDown="TextBox_Checker"/>
+                            PreviewKeyDown = "TextBox_Checker"/>
                         <Label
                             Content="b"/>
                         <TextBox
                             Text="0,00"
                             MinWidth="70"
                             Name="R2TextB"
-                            PreviewKeyDown="TextBox_Checker"/>
+                            PreviewKeyDown = "TextBox_Checker"/>
                         <Label
                             Content="f"/>
                         <ComboBox
@@ -121,14 +121,14 @@
                             Text="0,00"
                             MinWidth="50"
                             Name="R3TextA"
-                            PreviewKeyDown="TextBox_Checker"/>
+                            PreviewKeyDown = "TextBox_Checker"/>
                         <Label
                             Content="b"/>
                         <TextBox
                             Text="0,00"
                             MinWidth="50"
                             Name="R3TextB"
-                            PreviewKeyDown="TextBox_Checker"/>
+                            PreviewKeyDown = "TextBox_Checker"/>
                         <Label
                             Content="c"/>
                         <ComboBox
@@ -162,46 +162,94 @@
             <WrapPanel>
                 <Image
                     Source="Resources/p4.png"
-                    Height="70"/>
-                <Label
+                    Height="60"/>
+                <GroupBox Header="Parametrs">
+                    <WrapPanel>
+                        <Label
                     Content="c"
                     VerticalAlignment="Center"/>
-                <ComboBox
+                        <ComboBox
                     MinWidth="70"
                     VerticalAlignment="Center"
                     Name="R4ComboC"
                     SelectedIndex="0">
-                    <ComboBoxItem
+                            <ComboBoxItem
                         Content="0"/>
-                    <ComboBoxItem
+                            <ComboBoxItem
                         Content="1"/>
-                    <ComboBoxItem
+                            <ComboBoxItem
                         Content="2"/>
-                    <ComboBoxItem
+                            <ComboBoxItem
                         Content="3"/>
-                    <ComboBoxItem
+                            <ComboBoxItem
                         Content="4"/>
-                    <ComboBoxItem
+                            <ComboBoxItem
                         Content="5"/>
-                </ComboBox>
-                <Label
+                        </ComboBox>
+                        <Label
                     Content="d"
                     VerticalAlignment="Center"/>
-                <TextBox
+                        <TextBox
                     Text="0,00"
                     Width="70"
                     VerticalAlignment="Center"
                     Name="R4TextD"
-                    PreviewKeyDown="TextBox_Checker"/>
-                <Label
+                    PreviewKeyDown = "TextBox_Checker"/>
+                        <Label
                     Content="a"
                     VerticalAlignment="Center"/>
-                <TextBox
+                        <TextBox
                     Text="0,00"
                     Width="70"
                     VerticalAlignment="Center"
                     Name="R4TextA"
-                    PreviewKeyDown="TextBox_Checker"/>
+                    PreviewKeyDown = "TextBox_Checker"/>
+                    </WrapPanel>
+                </GroupBox>
+               
+            </WrapPanel>
+        </RadioButton>
+
+        <RadioButton
+            Margin="5"
+            Name="Radio5"
+            Checked="RadioButton_Checked">
+            <WrapPanel Orientation="Vertical">
+                <Image
+                    Source="Resources/p5.png"
+                    Height="65"/>
+                <GroupBox Header="Parametrs">
+                    <WrapPanel Orientation="Horizontal">
+                        <Label
+                            Content="N"
+                            VerticalAlignment="Center"/>
+                        <TextBox
+                            Text="0"
+                            Width="70"
+                            VerticalAlignment="Center"
+                            Name="R5TextN"
+                            PreviewKeyDown = "TextBox_Checker_int"/>
+                        <Label
+                            Content="K"
+                            VerticalAlignment="Center"/>
+                        <TextBox
+                            Text="0"
+                            Width="70"
+                            VerticalAlignment="Center"
+                            Name="R5TextK"
+                            PreviewKeyDown = "TextBox_Checker_int"/>
+                        <Label
+                            Content="x"
+                            VerticalAlignment="Center"/>
+                        <TextBox
+                            Text="0,00"
+                            Width="70"
+                            VerticalAlignment="Center"
+                            Name="R5TextX"
+                            PreviewKeyDown = "TextBox_Checker"/>
+                    </WrapPanel>
+                </GroupBox>
+                
             </WrapPanel>
         </RadioButton>
 
