@@ -12,3 +12,4 @@ C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-
 C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 2\obj\Debug\Лабораторная работа 2.csproj.CoreCompileInputs.cache
 C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 2\obj\Debug\Лабораторная работа 2.exe
 C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 2\obj\Debug\Лабораторная работа 2.pdb
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 2\obj\Debug\Лабораторная работа 2.csproj.AssemblyReference.cache

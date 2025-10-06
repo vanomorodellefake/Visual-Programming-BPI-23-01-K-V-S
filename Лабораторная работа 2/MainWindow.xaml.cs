@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Лабораторная_работа_2.Properties;
 
 namespace Лабораторная_работа_2
 {
@@ -25,6 +28,43 @@ namespace Лабораторная_работа_2
         public MainWindow()
         {
             InitializeComponent();
+
+            ImageP1.Source = BitMapToBitMapImageConverter(Properties.Resources.p1);
+            ImageP2.Source = BitMapToBitMapImageConverter(Properties.Resources.p2);
+            ImageP3.Source = BitMapToBitMapImageConverter(Properties.Resources.p3);
+            ImageP4.Source = BitMapToBitMapImageConverter(Properties.Resources.p4);
+            ImageP5.Source = BitMapToBitMapImageConverter(Properties.Resources.p5);
+        }
+
+        private BitmapImage BitMapToBitMapImageConverter(System.Drawing.Bitmap bitmap)
+        {
+            using (MemoryStream memory = new MemoryStream())
+            {
+                bitmap.Save(memory, ImageFormat.Png);
+                memory.Position = 0;
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.BeginInit();
+                bitmapImage.StreamSource = memory;
+                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                bitmapImage.EndInit();
+
+                return bitmapImage;
+            }
+        }
+
+        private void DisableAllPanels()
+        {
+            if (PanelP1 == null) return;
+            if (PanelP2 == null) return;
+            if (PanelP3 == null) return;
+            if (PanelP4 == null) return;
+            if (PanelP5 == null) return;
+
+            PanelP1.IsEnabled = false;
+            PanelP2.IsEnabled = false;
+            PanelP3.IsEnabled = false;
+            PanelP4.IsEnabled = false;
+            PanelP5.IsEnabled = false;
         }
 
         private void Calc_Click(object sender, RoutedEventArgs e)
@@ -110,33 +150,44 @@ namespace Лабораторная_работа_2
         }
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
+            DisableAllPanels();
             if (Radio1.IsChecked.GetValueOrDefault())
             {
                 _currentRadiobuttonIndex = 0;
+                if (PanelP1 != null)
+                    PanelP1.IsEnabled = true;
                 return;
             }
 
             else if (Radio2.IsChecked.GetValueOrDefault())
             {
                 _currentRadiobuttonIndex = 1;
+                if (PanelP2 != null)
+                    PanelP2.IsEnabled = true;
                 return;
             }
 
             else if(Radio3.IsChecked.GetValueOrDefault())
             {
                 _currentRadiobuttonIndex = 2;
+                if (PanelP3 != null)
+                    PanelP3.IsEnabled = true;
                 return;
             }
 
             else if(Radio4.IsChecked.GetValueOrDefault())
             {
                 _currentRadiobuttonIndex = 3;
+                if (PanelP4 != null)
+                    PanelP4.IsEnabled = true;
                 return;
             }
 
             else if(Radio5.IsChecked.GetValueOrDefault())
             {
                 _currentRadiobuttonIndex = 4;
+                if (PanelP5 != null)
+                    PanelP5.IsEnabled = true;
                 return;
             }
         }
@@ -175,8 +226,29 @@ namespace Лабораторная_работа_2
             }
         }
 
+        private void TextBox_Checker_Text(object sender, TextCompositionEventArgs e)
+        {
+            var txt = sender as TextBox;
+            if ((!char.IsDigit(e.Text, 0)) && (e.Text != ","))
+            {
+                e.Handled = true;
+            }
+            else if ((e.Text == ",") && ((txt.Text.IndexOf(",") != -1) || (txt.Text == "")))
+            {
+                e.Handled = true;
+            }
+        }
+        private void TextBox_Checker_Text_int(object sender, TextCompositionEventArgs e)
+        {
+            var txt = sender as TextBox;
+            if (!char.IsDigit(e.Text, 0))
+            {
+                e.Handled = true;
+            }
+        }
         private void TextBox_Checker(object sender, KeyEventArgs e)
         {
+            var txt = sender as TextBox;
             if (e.Key != Key.D0 && e.Key != Key.D1 && e.Key != Key.D2 && e.Key != Key.D3 && e.Key != Key.D4 && e.Key != Key.D5 && e.Key != Key.D6 && e.Key != Key.D7 && e.Key != Key.D8 && e.Key != Key.D9 && e.Key != Key.Back && e.Key != Key.Left && e.Key != Key.Right && e.Key != Key.Up && e.Key != Key.Down && e.Key != Key.Decimal && e.Key != Key.OemPeriod && e.Key != Key.OemComma)
             {
                 e.Handled = true;

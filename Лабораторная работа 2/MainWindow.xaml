@@ -6,6 +6,11 @@
         xmlns:local="clr-namespace:Лабораторная_работа_2"
         mc:Ignorable="d"
         Title="MainWindow" Height="565" Width="430" MinHeight="565" MinWidth="430">
+    <Window.Resources>
+        <BitmapImage x:Key="p3Image" UriSource="Resources/p3.png"/>
+        <BitmapImage x:Key="p4Image" UriSource="Resources/p4.png"/>
+        <BitmapImage x:Key="p5Image" UriSource="Resources/p5.png"/>
+    </Window.Resources>
     <StackPanel>
         
         <RadioButton 
@@ -13,9 +18,9 @@
             Margin="5"
             Name="Radio1"
             Checked="RadioButton_Checked">
-            <WrapPanel>
+            <WrapPanel IsEnabled="True" x:Name="PanelP1">
                 <Image
-                    Source="Resources/p1.png"
+                    x:Name="ImageP1"
                     Height="30"/>
                 <GroupBox
                     Header="Parameters">
@@ -39,7 +44,7 @@
                             Grid.Row="0"
                             MinWidth="70"
                             Name="R1TextA"
-                            PreviewKeyDown = "TextBox_Checker"/>
+                            PreviewTextInput = "TextBox_Checker_Text"/>
                         <Label
                             Content="f"
                             Grid.Column="0"
@@ -65,10 +70,10 @@
             Margin="5"
             Name="Radio2"
             Checked="RadioButton_Checked">
-            <StackPanel>
+            <StackPanel IsEnabled="False" x:Name="PanelP2">
                 <Image
-                    Height="31"
-                    Source="Resources/p2.png"/>
+                    x:Name="ImageP2"
+                    Height="31" />
                 <GroupBox
                     Header="Parameters">
                     <StackPanel
@@ -79,14 +84,14 @@
                             Text="0,00"
                             MinWidth="70"
                             Name="R2TextA"
-                            PreviewKeyDown = "TextBox_Checker"/>
+                            PreviewTextInput = "TextBox_Checker_Text"/>
                         <Label
                             Content="b"/>
                         <TextBox
                             Text="0,00"
                             MinWidth="70"
                             Name="R2TextB"
-                            PreviewKeyDown = "TextBox_Checker"/>
+                            PreviewTextInput = "TextBox_Checker_Text"/>
                         <Label
                             Content="f"/>
                         <ComboBox
@@ -107,9 +112,9 @@
             Margin="5"
             Name="Radio3"
             Checked="RadioButton_Checked">
-            <StackPanel>
+            <StackPanel IsEnabled="False" x:Name="PanelP3">
                 <Image
-                    Source="Resources/p3.png"
+                    x:Name="ImageP3"
                     Height="30"/>
                 <GroupBox
                      Header="Parameters">
@@ -121,14 +126,14 @@
                             Text="0,00"
                             MinWidth="50"
                             Name="R3TextA"
-                            PreviewKeyDown = "TextBox_Checker"/>
+                            PreviewTextInput = "TextBox_Checker_Text"/>
                         <Label
                             Content="b"/>
                         <TextBox
                             Text="0,00"
                             MinWidth="50"
                             Name="R3TextB"
-                            PreviewKeyDown = "TextBox_Checker"/>
+                            PreviewTextInput = "TextBox_Checker_Text"/>
                         <Label
                             Content="c"/>
                         <ComboBox
@@ -159,9 +164,9 @@
             Margin="5"
             Name="Radio4"
             Checked="RadioButton_Checked">
-            <WrapPanel>
+            <WrapPanel IsEnabled="False" x:Name="PanelP4">
                 <Image
-                    Source="Resources/p4.png"
+                    x:Name="ImageP4"
                     Height="60"/>
                 <GroupBox Header="Parametrs">
                     <WrapPanel>
@@ -194,7 +199,7 @@
                     Width="70"
                     VerticalAlignment="Center"
                     Name="R4TextD"
-                    PreviewKeyDown = "TextBox_Checker"/>
+                    PreviewTextInput = "TextBox_Checker_Text"/>
                         <Label
                     Content="a"
                     VerticalAlignment="Center"/>
@@ -203,7 +208,7 @@
                     Width="70"
                     VerticalAlignment="Center"
                     Name="R4TextA"
-                    PreviewKeyDown = "TextBox_Checker"/>
+                    PreviewTextInput = "TextBox_Checker_Text"/>
                     </WrapPanel>
                 </GroupBox>
                
@@ -214,9 +219,9 @@
             Margin="5"
             Name="Radio5"
             Checked="RadioButton_Checked">
-            <WrapPanel Orientation="Vertical">
+            <WrapPanel Orientation="Vertical" IsEnabled="False" x:Name="PanelP5">
                 <Image
-                    Source="Resources/p5.png"
+                    x:Name="ImageP5"
                     Height="65"/>
                 <GroupBox Header="Parametrs">
                     <WrapPanel Orientation="Horizontal">
@@ -224,20 +229,35 @@
                             Content="N"
                             VerticalAlignment="Center"/>
                         <TextBox
-                            Text="0"
                             Width="70"
                             VerticalAlignment="Center"
                             Name="R5TextN"
-                            PreviewKeyDown = "TextBox_Checker_int"/>
+                            PreviewTextInput = "TextBox_Checker_Text_int">
+                            <TextBox.Text>
+                                <Binding Path="R5TextK">
+                                    <Binding.ValidationRules>
+                                        <DataErrorValidationRule />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
                         <Label
                             Content="K"
                             VerticalAlignment="Center"/>
                         <TextBox
-                            Text="0"
                             Width="70"
                             VerticalAlignment="Center"
                             Name="R5TextK"
-                            PreviewKeyDown = "TextBox_Checker_int"/>
+                            PreviewTextInput = "TextBox_Checker_Text_int">
+                            <TextBox.Text>
+                                <Binding Path="R5TextK">
+                                    <Binding.ValidationRules>
+                                        <DataErrorValidationRule />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+
+                        </TextBox>
                         <Label
                             Content="x"
                             VerticalAlignment="Center"/>
@@ -246,7 +266,7 @@
                             Width="70"
                             VerticalAlignment="Center"
                             Name="R5TextX"
-                            PreviewKeyDown = "TextBox_Checker"/>
+                            PreviewTextInput = "TextBox_Checker_Text"/>
                     </WrapPanel>
                 </GroupBox>
                 
