@@ -1,0 +1,20 @@
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\Лабораторная работа 4.1.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\App.g.cs
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\Лабораторная работа 4.1_MarkupCompile.cache
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\Лабораторная работа 4.1_MarkupCompile.lref
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\bin\Debug\Лабораторная работа 4.1.exe.config
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\bin\Debug\Лабораторная работа 4.1.exe
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\bin\Debug\Лабораторная работа 4.1.pdb
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\Лабораторная работа 4.1.g.resources
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\Лабораторная_работа_4._1.Properties.Resources.resources
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\Лабораторная работа 4.1.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\Лабораторная работа 4.1.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\Лабораторная работа 4.1.exe
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\Лабораторная работа 4.1.pdb
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\View\WindowRole.g.cs
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\View\WindowsEmployee.g.cs
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\View\WindowRole.baml
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\View\WindowsEmployee.baml
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.1\Лабораторная работа 4.1\obj\Debug\Лабораторная работа 4.1.exe.config
