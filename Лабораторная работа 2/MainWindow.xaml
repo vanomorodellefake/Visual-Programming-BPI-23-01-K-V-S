@@ -5,14 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Лабораторная_работа_2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="565" Width="430" MinHeight="565" MinWidth="430">
+        Title="MainWindow" Height="670" Width="430" MinHeight="670" MinWidth="430">
     <Window.Resources>
         <BitmapImage x:Key="p3Image" UriSource="Resources/p3.png"/>
         <BitmapImage x:Key="p4Image" UriSource="Resources/p4.png"/>
         <BitmapImage x:Key="p5Image" UriSource="Resources/p5.png"/>
+
+        <Style x:Key="WhiteAndGrayButton">
+            <Setter Property="Control.FontFamily" Value="Verdana"/>
+            <Setter Property="Control.Background" Value="Gray"/>
+            <Setter Property="Control.Foreground" Value="White"/>
+            <Setter Property="Control.Margin" Value="10"/>
+        </Style>
+        <Style x:Key="WhiteAndGrayGroupBox" BasedOn="{StaticResource WhiteAndGrayButton}">
+            <Setter Property="Control.BorderThickness" Value="2"/>
+            <Setter Property="Control.BorderBrush" Value="DarkSlateGray"/>
+            <Setter Property="Control.Foreground" Value="Black"/>
+        </Style>
     </Window.Resources>
     <StackPanel>
-        
+        <StackPanel.Background>
+            <RadialGradientBrush GradientOrigin="0.5,0.5">
+                <GradientStop Color="LightGray" Offset="0.5" />
+                <GradientStop Color="White" Offset="2" />
+            </RadialGradientBrush>
+        </StackPanel.Background>
         <RadioButton 
             IsChecked="True"
             Margin="5"
@@ -23,7 +40,8 @@
                     x:Name="ImageP1"
                     Height="30"/>
                 <GroupBox
-                    Header="Parameters">
+                    Header="Parameters"
+                    Style="{StaticResource WhiteAndGrayGroupBox}">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -75,7 +93,8 @@
                     x:Name="ImageP2"
                     Height="31" />
                 <GroupBox
-                    Header="Parameters">
+                    Header="Parameters"
+                    Style="{StaticResource WhiteAndGrayGroupBox}">
                     <StackPanel
                         Orientation="Horizontal">
                         <Label
@@ -117,7 +136,8 @@
                     x:Name="ImageP3"
                     Height="30"/>
                 <GroupBox
-                     Header="Parameters">
+                     Header="Parameters"
+                    Style="{StaticResource WhiteAndGrayGroupBox}">
                     <StackPanel
                         Orientation="Horizontal">
                         <Label
@@ -168,7 +188,8 @@
                 <Image
                     x:Name="ImageP4"
                     Height="60"/>
-                <GroupBox Header="Parametrs">
+                <GroupBox Header="Parametrs"
+                          Style="{StaticResource WhiteAndGrayGroupBox}">
                     <WrapPanel>
                         <Label
                     Content="c"
@@ -223,7 +244,8 @@
                 <Image
                     x:Name="ImageP5"
                     Height="65"/>
-                <GroupBox Header="Parametrs">
+                <GroupBox Header="Parametrs"
+                          Style="{StaticResource WhiteAndGrayGroupBox}">
                     <WrapPanel Orientation="Horizontal">
                         <Label
                             Content="N"
@@ -276,7 +298,8 @@
         <Button 
             Content="Считать"
             Width="100"
-            Click="Calc_Click"/>
+            Click="Calc_Click"
+            Style="{StaticResource WhiteAndGrayButton}"/>
         
     </StackPanel>
 </Window>

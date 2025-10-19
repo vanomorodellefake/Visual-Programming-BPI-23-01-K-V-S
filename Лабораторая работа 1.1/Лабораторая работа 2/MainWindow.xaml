@@ -44,7 +44,14 @@
                 Content= "Введите значение X:"/>
             <TextBox
                 x:Name="znach_peremen"
-                PreviewKeyDown="TextBox_Checker" Grid.ColumnSpan="3" Margin="133,0,0,0"/>
+                PreviewKeyDown="TextBox_Checker" Grid.ColumnSpan="3" Margin="133,0,0,0">
+                <TextBox.Background>
+                    <LinearGradientBrush StartPoint="0.49,0.5" EndPoint="0.5,0.5">
+                        <GradientStop Color="SlateGray" Offset="0" />
+                        <GradientStop Color="White" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
         </Grid>
 
         <Button 
@@ -56,6 +63,12 @@
             Grid.Row="2"
             x:Name="ChooseOfFunction"
             SelectionChanged="SelectionChanged">
+            <ComboBox.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="SlateGray" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                </LinearGradientBrush>
+            </ComboBox.Background>
             <ComboBoxItem>Синус</ComboBoxItem>
             <ComboBoxItem>Косинус</ComboBoxItem>
             <ComboBoxItem>Тангенс</ComboBoxItem>
@@ -65,13 +78,27 @@
             Grid.Column="1" 
             Grid.RowSpan="4"
             Content="Вывести значение функции"
-            Click="ReturnZnach"/>
+            Click="ReturnZnach">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="SlateGray" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
         <Button 
             Grid.Column="2" 
             Grid.RowSpan="4" 
             Content="Создать производную экземпляра"
             Click="CreateDerivative"
-            x:Name="Derivative"/>
+            x:Name="Derivative">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                    <GradientStop Color="SlateGray" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>
