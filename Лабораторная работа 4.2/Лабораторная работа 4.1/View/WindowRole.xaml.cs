@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp.Model;
 using WpfApp.ViewModel;
 
 namespace WpfApp.View
@@ -26,6 +27,26 @@ namespace WpfApp.View
             RoleViewModel rlPerson = new RoleViewModel();
             lvRole.ItemsSource = rlPerson.ListRole;
             DataContext = new RoleViewModel();
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            WindowNewRole wnRole = new WindowNewRole
+            {
+                Title = "Новая должность",
+                Owner = this
+            };
+
+            int maxIdRole = vmRole.MaxId() + 1;
+            Role role = new Role
+            {
+                Id = maxIdRole
+            };
+            wnRole.DataContext = role;
+            if (wnRole.ShowDialog() == true)
+            {
+                vmRole.ListRole.Add(role);
+            }
         }
     }
 }

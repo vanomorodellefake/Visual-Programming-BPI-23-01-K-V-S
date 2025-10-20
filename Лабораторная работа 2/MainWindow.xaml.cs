@@ -25,6 +25,8 @@ namespace Лабораторная_работа_2
     {
         private FuncSolver _funcSolver;
         private int _currentRadiobuttonIndex = 0;
+
+        int k_style = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -261,6 +263,28 @@ namespace Лабораторная_работа_2
             {
                 e.Handled = true;
             }
+        }
+
+        private void ChangeTheme_Click()
+        {
+            string style = "";
+            k_style++;
+            if (k_style % 2 == 0)
+            {
+                style = "Coffee";
+            }
+            else
+            {
+                style = "White";
+            }
+            // определяем путь к файлу ресурсов
+            var uri = new Uri(style + ".xaml", UriKind.Relative);
+            // загружаем словарь ресурсов
+            ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+            // очищаем коллекцию ресурсов приложения
+            Application.Current.Resources.Clear();
+            // добавляем загруженный словарь ресурсов
+            Application.Current.Resources.MergedDictionaries.Add(resourceDict);
         }
     }
 }

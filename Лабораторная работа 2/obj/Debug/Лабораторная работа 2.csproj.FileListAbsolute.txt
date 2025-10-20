@@ -29,3 +29,6 @@ C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторна�
 C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 2\obj\Debug\Лабораторная работа 2.exe
 C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 2\obj\Debug\Лабораторная работа 2.pdb
 C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 2\obj\Debug\Лабораторная работа 2.exe.config
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 2\obj\Debug\App.baml
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 2\obj\Debug\Coffee.baml
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 2\obj\Debug\White.baml

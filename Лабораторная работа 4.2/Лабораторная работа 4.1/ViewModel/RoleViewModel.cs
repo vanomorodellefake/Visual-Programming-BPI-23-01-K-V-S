@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using WpfApp.Helper;
 using WpfApp.Model;
+using WpfApp.View;
 
 namespace WpfApp.ViewModel
 {
@@ -66,11 +67,13 @@ namespace WpfApp.ViewModel
             }
             return max;
         }
-        public event PropertyChangedEventHandler PropertyChanged; protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        public event PropertyChangedEventHandler PropertyChanged; 
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        private RelayCommand addRole; public RelayCommand AddRole
+        private RelayCommand addRole; 
+        public RelayCommand AddRole
         {
             get
             {

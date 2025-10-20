@@ -85,12 +85,14 @@ namespace Лабораторая_работа_2
             int selectedIndex = ChooseOfFunction.SelectedIndex;
             if (selectedIndex == 2)
             {
-                Derivative.Background = Brushes.DarkRed;
+                var _ = this.Resources["RedButton"] as Style;
+                Derivative.Style = _;
                 Derivative.ToolTip = "Данный функционал не доступен для тангенса";
             }
             else
             {
-                Derivative.Background = Brushes.LightGray;
+                var _ = this.Resources["UsualButton"] as Style;
+                Derivative.Style = _;
                 Derivative.ToolTip = null;
             }
         }

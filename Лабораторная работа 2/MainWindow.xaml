@@ -10,18 +10,6 @@
         <BitmapImage x:Key="p3Image" UriSource="Resources/p3.png"/>
         <BitmapImage x:Key="p4Image" UriSource="Resources/p4.png"/>
         <BitmapImage x:Key="p5Image" UriSource="Resources/p5.png"/>
-
-        <Style x:Key="WhiteAndGrayButton">
-            <Setter Property="Control.FontFamily" Value="Verdana"/>
-            <Setter Property="Control.Background" Value="Gray"/>
-            <Setter Property="Control.Foreground" Value="White"/>
-            <Setter Property="Control.Margin" Value="10"/>
-        </Style>
-        <Style x:Key="WhiteAndGrayGroupBox" BasedOn="{StaticResource WhiteAndGrayButton}">
-            <Setter Property="Control.BorderThickness" Value="2"/>
-            <Setter Property="Control.BorderBrush" Value="DarkSlateGray"/>
-            <Setter Property="Control.Foreground" Value="Black"/>
-        </Style>
     </Window.Resources>
     <StackPanel>
         <StackPanel.Background>
@@ -38,10 +26,10 @@
             <WrapPanel IsEnabled="True" x:Name="PanelP1">
                 <Image
                     x:Name="ImageP1"
-                    Height="30"/>
+                    Height="30" />
                 <GroupBox
                     Header="Parameters"
-                    Style="{StaticResource WhiteAndGrayGroupBox}">
+                    Style="{DynamicResource GroupBoxStyle}">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -137,7 +125,7 @@
                     Height="30"/>
                 <GroupBox
                      Header="Parameters"
-                    Style="{StaticResource WhiteAndGrayGroupBox}">
+                    Style="{DynamicResource GroupBoxStyle}">
                     <StackPanel
                         Orientation="Horizontal">
                         <Label
@@ -189,7 +177,7 @@
                     x:Name="ImageP4"
                     Height="60"/>
                 <GroupBox Header="Parametrs"
-                          Style="{StaticResource WhiteAndGrayGroupBox}">
+                          Style="{DynamicResource GroupBoxStyle}">
                     <WrapPanel>
                         <Label
                     Content="c"
@@ -245,7 +233,7 @@
                     x:Name="ImageP5"
                     Height="65"/>
                 <GroupBox Header="Parametrs"
-                          Style="{StaticResource WhiteAndGrayGroupBox}">
+                          Style="{DynamicResource GroupBoxStyle}">
                     <WrapPanel Orientation="Horizontal">
                         <Label
                             Content="N"
@@ -294,12 +282,18 @@
                 
             </WrapPanel>
         </RadioButton>
-
-        <Button 
-            Content="Считать"
-            Width="100"
-            Click="Calc_Click"
-            Style="{StaticResource WhiteAndGrayButton}"/>
+        <StackPanel Orientation="Horizontal">
+            <Button 
+                Content="Считать"
+                Width="100"
+                Click="Calc_Click"
+                Style="{DynamicResource ButtonStyle}"/>
+            <Button Content="Сменить тему"
+                    Width="100"
+                    Click="ChangeTheme_Click"
+                    Style="{DynamicResource ButtonStyle}"/>
+        </StackPanel>
+        
         
     </StackPanel>
 </Window>

@@ -6,6 +6,93 @@
         xmlns:local="clr-namespace:Лабораторая_работа_2"
         mc:Ignorable="d"
         Title="MainWindow" Height="150" Width="800" MaxHeight="150" MaxWidth="800" MinHeight="150" MinWidth="800">
+    <Window.Resources>
+        
+
+        <LinearGradientBrush x:Key="SteelGrayBrush" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="SlateGray" Offset="0"/>
+            <GradientStop Color="SteelBlue" Offset="1"/>
+        </LinearGradientBrush>
+        
+        
+        <LinearGradientBrush x:Key="StrongSlateGrayAndWhiteBrush" StartPoint="0.49,0.5" EndPoint="0.5,0.5">
+            <GradientStop Color="SlateGray" Offset="0" />
+            <GradientStop Color="White" Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="SlateGrayToWhiteBrush" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="SlateGray" Offset="0" />
+            <GradientStop Color="White" Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="WhiteToSlateGrayBrush" StartPoint="1,1" EndPoint="0,0">
+            <GradientStop Color="SlateGray" Offset="0" />
+            <GradientStop Color="White" Offset="1" />
+        </LinearGradientBrush>
+        
+        <LinearGradientBrush x:Key="WhiteToRedBrush" StartPoint="1,1" EndPoint="0,0">
+            <GradientStop Color="Red" Offset="0" />
+            <GradientStop Color="White" Offset="1" />
+        </LinearGradientBrush>
+
+        <Style x:Key="RedButton" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource WhiteToSlateGrayBrush}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Red"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="UsualButton" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource WhiteToSlateGrayBrush}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="SlateGray"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource SteelGrayBrush}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource SteelGrayBrush}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="UnUsualButton" TargetType="Button" BasedOn="{StaticResource UsualButton}">
+            <Setter Property="Background" Value="{StaticResource SlateGrayToWhiteBrush}"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -17,7 +104,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <!---
         <Grid>
             <Grid.ColumnDefinitions>
@@ -40,22 +127,19 @@
                 <ColumnDefinition Width="109*"/>
             </Grid.ColumnDefinitions>
             <Button 
-                Background="SlateGray"
                 Content= "Введите значение X:"/>
             <TextBox
                 x:Name="znach_peremen"
-                PreviewKeyDown="TextBox_Checker" Grid.ColumnSpan="3" Margin="133,0,0,0">
-                <TextBox.Background>
-                    <LinearGradientBrush StartPoint="0.49,0.5" EndPoint="0.5,0.5">
-                        <GradientStop Color="SlateGray" Offset="0" />
-                        <GradientStop Color="White" Offset="1" />
-                    </LinearGradientBrush>
-                </TextBox.Background>
-            </TextBox>
+                PreviewKeyDown="TextBox_Checker" 
+                Grid.ColumnSpan="2" 
+                Margin="1,0,0,0" 
+                Grid.Column="1" 
+                Height="39" 
+                VerticalAlignment="Top"
+                Background="{StaticResource StrongSlateGrayAndWhiteBrush}"/>
         </Grid>
 
         <Button 
-            Background="SlateGray"
             Grid.Row="1"
             Content="Выберите тип функции:"/>
 
@@ -63,41 +147,25 @@
             Grid.Row="2"
             x:Name="ChooseOfFunction"
             SelectionChanged="SelectionChanged">
-            <ComboBox.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="SlateGray" Offset="0" />
-                    <GradientStop Color="White" Offset="1" />
-                </LinearGradientBrush>
-            </ComboBox.Background>
-            <ComboBoxItem>Синус</ComboBoxItem>
-            <ComboBoxItem>Косинус</ComboBoxItem>
-            <ComboBoxItem>Тангенс</ComboBoxItem>
+            <ComboBoxItem Background="{StaticResource StrongSlateGrayAndWhiteBrush}">Синус</ComboBoxItem>
+            <ComboBoxItem Background="{StaticResource StrongSlateGrayAndWhiteBrush}">Косинус</ComboBoxItem>
+            <ComboBoxItem Background="{StaticResource StrongSlateGrayAndWhiteBrush}">Тангенс</ComboBoxItem>
         </ComboBox>
 
         <Button 
             Grid.Column="1" 
             Grid.RowSpan="4"
             Content="Вывести значение функции"
-            Click="ReturnZnach">
-            <Button.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="SlateGray" Offset="0" />
-                    <GradientStop Color="White" Offset="1" />
-                </LinearGradientBrush>
-            </Button.Background>
+            Click="ReturnZnach"
+            Style="{StaticResource UnUsualButton}">
         </Button>
         <Button 
             Grid.Column="2" 
             Grid.RowSpan="4" 
             Content="Создать производную экземпляра"
             Click="CreateDerivative"
-            x:Name="Derivative">
-            <Button.Background>
-                <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
-                    <GradientStop Color="SlateGray" Offset="0" />
-                    <GradientStop Color="White" Offset="1" />
-                </LinearGradientBrush>
-            </Button.Background>
+            x:Name="Derivative"
+            Style="{StaticResource UsualButton}">
         </Button>
 
     </Grid>
