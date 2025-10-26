@@ -34,5 +34,18 @@ namespace WpfApp.ViewModel
 
             });
         }
+        public int MaxId()
+        {
+            int max = 0;
+            foreach (var r in this.ListRole)
+            {
+                if (max < r.Id)
+                {
+                    max = r.Id;
+                }
+                ;
+            }
+            return max;
+        }
     }
 }

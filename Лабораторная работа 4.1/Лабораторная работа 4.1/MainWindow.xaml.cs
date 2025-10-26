@@ -22,17 +22,22 @@ namespace WpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static int IdRole { get; set; }
+        public static int IdEmployee { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
         }
         private void Employee_OnClick(object sender, RoutedEventArgs e)
         {
-            WindowsEmployee wEmployee = new WindowsEmployee(); wEmployee.Show();
+            WindowsEmployee wEmployee = new WindowsEmployee(); 
+            wEmployee.Show();
         }
         private void Role_OnClick(object sender, RoutedEventArgs e)
         {
-            WindowRole wRole = new WindowRole(); wRole.Show();
+            WindowsRole wRole = new WindowsRole(); 
+            wRole.Show();
 
         }
     }

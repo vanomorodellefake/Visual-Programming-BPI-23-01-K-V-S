@@ -120,7 +120,8 @@ namespace WpfApp.ViewModel
         }
         #endregion
         #region EditPerson
-        private RelayCommand editPerson; public RelayCommand EditPerson
+        private RelayCommand editPerson; 
+        public RelayCommand EditPerson
         {
             get
             {

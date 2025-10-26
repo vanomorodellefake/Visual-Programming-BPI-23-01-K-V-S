@@ -8,17 +8,35 @@
         Title="Сотрудники" 
         Height="300" Width="500">
     <StackPanel>
+        <StackPanel Orientation="Horizontal" Background="#FFE4E0E0">
+            <Button x:Name="btnAdd" 
+            Margin="10,10,5,10" 
+            Content="Добавить"
+            Height="25"
+            Click="btnAdd_Click"/>
+            <Button x:Name="btnEdit" 
+            Margin="10,10,5,10" 
+            Content="Редактировать"
+            Height="25" 
+            Click="btnEdit_Click"/>
+            <Button x:Name="btnDelete" 
+            Margin="10,10,5,10" 
+            Content="Удалить" 
+            Height="25"
+            Click="btnDelete_Click"/>
+        </StackPanel>
         <ListView x:Name="lvEmployee">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
-                        <GridViewColumn Header="Код" Width="50"
+                        <GridViewColumn Header="Код"
+                                        Width="50"
                                         DisplayMemberBinding="{Binding Id}"/>
                         <GridViewColumn Header="Фамилия"
                                         DisplayMemberBinding="{Binding LastName}"/>
                         <GridViewColumn Header="Имя"
                                         DisplayMemberBinding="{Binding FirstName}"/>
-                        <GridViewColumn Header="Должность"
+                        <GridViewColumn Header="Должность" Width="100"
                                         DisplayMemberBinding="{Binding Role}"/>
                         <GridViewColumn Header="Дата рождения"
                                         DisplayMemberBinding="{Binding Birthday, StringFormat={}{0:dd\.}{0:MM\.}{0:yyyy}}"/>

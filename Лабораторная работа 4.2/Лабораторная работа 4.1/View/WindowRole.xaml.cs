@@ -36,7 +36,7 @@ namespace WpfApp.View
                 Title = "Новая должность",
                 Owner = this
             };
-
+            RoleViewModel vmRole = new RoleViewModel();
             int maxIdRole = vmRole.MaxId() + 1;
             Role role = new Role
             {

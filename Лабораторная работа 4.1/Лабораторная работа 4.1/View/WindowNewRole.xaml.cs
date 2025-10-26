@@ -11,20 +11,22 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using WpfApp.ViewModel;
 
 namespace WpfApp.View
 {
     /// <summary>
-    /// Логика взаимодействия для WindowRole.xaml
+    /// Логика взаимодействия для WindowNewRole.xaml
     /// </summary>
-    public partial class WindowRole : Window
+    public partial class WindowNewRole : Window
     {
-        public WindowRole()
+        public WindowNewRole()
         {
             InitializeComponent();
-            RoleViewModel rlPerson = new RoleViewModel();
-            lvRole.ItemsSource = rlPerson.ListRole;
         }
+        private void BtSave_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = true;
+        }
+
     }
 }
