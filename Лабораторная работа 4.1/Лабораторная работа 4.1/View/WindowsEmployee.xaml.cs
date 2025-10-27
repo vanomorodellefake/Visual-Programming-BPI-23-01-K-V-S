@@ -46,7 +46,6 @@ namespace WpfApp.View
                 Title = "Новый сотрудник",
                 Owner = this
             };
-            // формирование кода нового собрудника
             int maxIdPerson = vmPerson.MaxId() + 1;
             PersonDPO per = new PersonDPO
             {
@@ -60,7 +59,6 @@ namespace WpfApp.View
                 Role r = (Role)wnEmployee.CbRole.SelectedValue;
                 per.Role = r.NameRole;
                 personsDPO.Add(per);
-                // добавление нового сотрудника в коллекцию ListPerson<Person>
                 Person p = new Person();
                 p = p.CopyFromPersonDPO(per);
                 vmPerson.ListPerson.Add(p);

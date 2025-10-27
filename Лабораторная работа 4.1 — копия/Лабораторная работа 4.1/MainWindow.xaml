@@ -10,11 +10,11 @@
         <Menu>
             <MenuItem x:Name="Employee"
                       Header="Сотрудники" 
-                      Click="Employee_OnClick">
+                      Command="{Binding EmployeeOpen}">
             </MenuItem>
             <MenuItem x:Name="Role" 
                       Header="Должности" 
-                      Click="Role_OnClick">
+                      Command="{Binding RoleOpen}">
             </MenuItem>
         </Menu>
     </Grid>

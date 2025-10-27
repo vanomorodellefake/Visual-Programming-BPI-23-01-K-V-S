@@ -20,96 +20,10 @@ namespace WpfApp.View
 {
     public partial class WindowsEmployee : Window
     {
-        private PersonViewModel vmPerson;
-        private RoleViewModel vmRole;
-        private ObservableCollection<PersonDPO> personsDPO;
-        private List<Role> roles;
         public WindowsEmployee()
         {
             InitializeComponent();
             DataContext = new PersonViewModel();
-        }
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
-        {
-            WindowsNewEmployee wnEmployee = new WindowsNewEmployee
-            {
-                Title = "Новый сотрудник",
-                Owner = this
-            };
-            // формирование кода нового собрудника
-            int maxIdPerson = vmPerson.MaxId() + 1;
-            PersonDPO per = new PersonDPO
-            {
-                Id = maxIdPerson,
-                Birthday = DateTime.Now
-            };
-            wnEmployee.DataContext = per;
-            wnEmployee.CbRole.ItemsSource = roles;
-            if (wnEmployee.ShowDialog() == true)
-            {
-                Role r = (Role)wnEmployee.CbRole.SelectedValue;
-                per.RoleName = r.NameRole;
-                personsDPO.Add(per);
-                // добавление нового сотрудника в коллекцию ListPerson<Person>
-                Person p = new Person();
-                p = p.CopyFromPersonDPO(per);
-                vmPerson.ListPerson.Add(p);
-            }
-        }
-        private void btnEdit_Click(object sender, RoutedEventArgs e)
-        {
-            WindowsNewEmployee wnEmployee = new WindowsNewEmployee
-            {
-                Title = "Редактирование данных",
-                Owner = this
-            };
-            PersonDPO perDPO = (PersonDPO)lvEmployee.SelectedValue;
-            PersonDPO tempPerDPO;
-            if (perDPO != null)
-            {
-                tempPerDPO = perDPO.ShallowCopy();
-                wnEmployee.DataContext = tempPerDPO;
-                wnEmployee.CbRole.ItemsSource = roles;
-                wnEmployee.CbRole.Text = tempPerDPO.RoleName;
-                if (wnEmployee.ShowDialog() == true)
-                {
-                     Role r = (Role)wnEmployee.CbRole.SelectedValue;
-                    perDPO.RoleName = r.NameRole;
-                    perDPO.FirstName = tempPerDPO.FirstName;
-                    perDPO.LastName = tempPerDPO.LastName;
-                    perDPO.Birthday = tempPerDPO.Birthday;
-                    lvEmployee.ItemsSource = null;
-                    lvEmployee.ItemsSource = personsDPO;
-                    FindPerson finder = new FindPerson(perDPO.Id);
-                    List<Person> listPerson = vmPerson.ListPerson.ToList();
-                    Person p = listPerson.Find(new Predicate<Person>(finder.PersonPredicate));
-                    p = p.CopyFromPersonDPO(perDPO);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Необходимо выбрать сотрудника для редактированния",
-                "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
-        }
-        private void btnDelete_Click(object sender, RoutedEventArgs e)
-        {
-            PersonDPO person = (PersonDPO)lvEmployee.SelectedItem;
-            if (person != null)
-            {
-                MessageBoxResult result = MessageBox.Show("Удалить данные по сотруднику: \n" + person.LastName +" "+person.FirstName, "Предупреждение", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
-                if (result == MessageBoxResult.OK)
-                {
-                    personsDPO.Remove(person);
-                    Person per = new Person();
-                    per = per.CopyFromPersonDPO(person);
-                    vmPerson.ListPerson.Remove(per);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Необходимо выбрать данные по сотруднику для удаления", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
         }
     }
 }

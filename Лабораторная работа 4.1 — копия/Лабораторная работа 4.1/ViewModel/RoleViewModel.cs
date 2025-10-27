@@ -10,7 +10,6 @@ using System.Windows;
 using WpfApp.Helper;
 using WpfApp.Model;
 using WpfApp.View;
-using Лабораторная_работа_4._1.Helper;
 
 namespace WpfApp.ViewModel
 {
@@ -69,7 +68,7 @@ namespace WpfApp.ViewModel
             {
                 selectedRole = value;
                 OnPropertyChanged("SelectedRole");
-                EditRole.CanExecute(true);
+                //EditRole.CanExecute(true);
             }
         }
         private RelayCommand addRole;
@@ -111,7 +110,6 @@ namespace WpfApp.ViewModel
                     wnRole.DataContext = tempRole;
                     if (wnRole.ShowDialog() == true)
                     {
-                        // сохранение данных в оперативной памяти
                         role.NameRole = tempRole.NameRole;
                     }
                 }, (obj) => SelectedRole != null && ListRole.Count > 0));

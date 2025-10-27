@@ -11,12 +11,12 @@ using System.Windows;
 using WpfApp.Helper;
 using WpfApp.Model;
 using WpfApp.View;
-using Лабораторная_работа_4._1.Helper;
 
 namespace WpfApp.ViewModel
 {
     public class PersonViewModel : INotifyPropertyChanged
     {
+        private RoleViewModel roleViewModel;
         private PersonDPO selectedPersonDpo;
         public PersonDPO SelectedPersonDpo
         {
@@ -25,6 +25,7 @@ namespace WpfApp.ViewModel
             {
                 selectedPersonDpo = value;
                 OnPropertyChanged("SelectedPersonDpo");
+                EditPerson.CanExecute(true);
             }
         }
 
@@ -110,6 +111,9 @@ namespace WpfApp.ViewModel
                         Id = maxIdPerson,
                         Birthday = DateTime.Now
                     };
+                    roleViewModel = new RoleViewModel();
+                    wnPerson.CbRole.ItemsSource = roleViewModel.ListRole;
+                    wnPerson.CbRole.SelectedIndex = 0;
                     wnPerson.DataContext = per;
                     if (wnPerson.ShowDialog() == true)
                     {
@@ -137,6 +141,9 @@ namespace WpfApp.ViewModel
                     {
                         Title = "Редактирование данных сотрудника",
                     };
+                    roleViewModel = new RoleViewModel();
+                    wnPerson.CbRole.ItemsSource = roleViewModel.ListRole;
+                    wnPerson.CbRole.SelectedItem = wnPerson.CbRole.FindName(SelectedPersonDpo.RoleName);
                     PersonDPO personDpo = SelectedPersonDpo;
                     PersonDPO tempPerson = new PersonDPO();
                     tempPerson = personDpo.ShallowCopy();
@@ -153,7 +160,7 @@ namespace WpfApp.ViewModel
                         Person p = listPerson.Find(new Predicate<Person>(finder.PersonPredicate));
                         p = p.CopyFromPersonDPO(personDpo);
                     }
-                }, (obj) => SelectedPersonDpo != null && ListPersonDpo.Count > 0));
+                }, (obj) => SelectedPersonDpo != null && ListPerson.Count > 0));
             }
         }
         #endregion
@@ -175,7 +182,7 @@ namespace WpfApp.ViewModel
                         per = per.CopyFromPersonDPO(person);
                         ListPerson.Remove(per);
                     }
-                }, (obj) => SelectedPersonDpo != null && ListPersonDpo.Count > 0));
+                }, (obj) => SelectedPersonDpo != null && ListPerson.Count > 0));
             }
         }
         #endregion

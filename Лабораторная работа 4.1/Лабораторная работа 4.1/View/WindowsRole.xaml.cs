@@ -63,7 +63,6 @@ namespace WpfApp.View
                 wnRole.DataContext = tempRole;
                 if (wnRole.ShowDialog() == true)
                 {
-                    // сохранение данных
                     role.NameRole = tempRole.NameRole;
                     lvRole.ItemsSource = null;
                     lvRole.ItemsSource = vmRole.ListRole;

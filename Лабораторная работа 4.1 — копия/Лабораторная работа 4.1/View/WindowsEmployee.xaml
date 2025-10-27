@@ -25,7 +25,7 @@
             Height="25"
             Command="{Binding DeletePerson}"/>
         </StackPanel>
-        <ListView x:Name="lvEmployee" ItemsSource="{Binding ListPerson}">
+        <ListView x:Name="lvEmployee" ItemsSource="{Binding ListPersonDpo}" SelectedItem="{Binding SelectedPersonDpo}">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
@@ -37,7 +37,7 @@
                         <GridViewColumn Header="Имя"
                                         DisplayMemberBinding="{Binding FirstName}"/>
                         <GridViewColumn Header="Должность" Width="100"
-                                        DisplayMemberBinding="{Binding Role}"/>
+                                        DisplayMemberBinding="{Binding RoleName}"/>
                         <GridViewColumn Header="Дата рождения"
                                         DisplayMemberBinding="{Binding Birthday, StringFormat={}{0:dd\.}{0:MM\.}{0:yyyy}}"/>
                     </GridView.Columns>

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp.View;
+using WpfApp.ViewModel;
 
 
 namespace WpfApp
@@ -22,23 +23,10 @@ namespace WpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static int IdRole { get; set; }
-        public static int IdEmployee { get; set; }
-
         public MainWindow()
         {
             InitializeComponent();
-        }
-        private void Employee_OnClick(object sender, RoutedEventArgs e)
-        {
-            WindowsEmployee wEmployee = new WindowsEmployee(); 
-            wEmployee.Show();
-        }
-        private void Role_OnClick(object sender, RoutedEventArgs e)
-        {
-            WindowsRole wRole = new WindowsRole(); 
-            wRole.Show();
-
+            DataContext = new MainWindowCommands();
         }
     }
 }
