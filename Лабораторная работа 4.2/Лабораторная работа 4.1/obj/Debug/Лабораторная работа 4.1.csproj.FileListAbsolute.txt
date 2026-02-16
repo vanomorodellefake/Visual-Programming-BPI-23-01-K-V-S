@@ -46,3 +46,4 @@ C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-
 C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 4.2\Лабораторная работа 4.1\obj\Debug\Лабораторная работа 4.1_MarkupCompile.cache
 C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 4.2\Лабораторная работа 4.1\obj\Debug\Лабораторная работа 4.1_MarkupCompile.lref
 C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 4.2\Лабораторная работа 4.1\obj\Debug\View\WindowNewRole.g.cs
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 4.2\Лабораторная работа 4.1\obj\Debug\View\WindowNewRole.g.cs
