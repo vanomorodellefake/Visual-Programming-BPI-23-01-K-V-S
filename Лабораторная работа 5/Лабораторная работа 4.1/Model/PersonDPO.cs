@@ -87,11 +87,11 @@ namespace WpfApp.Model
         }
         public string GetStringTime(DateTime dateTime)
         {
-            return dateTime.ToString();
+            return dateTime.ToString("dd.MM.yyyy");
         }
         public DateTime GetDateTime(string dateTime)
         {
-            return DateTime.ParseExact(dateTime, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            return DateTime.ParseExact(dateTime, "dd.MM.yyyy", System.Globalization.CultureInfo.InvariantCulture);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

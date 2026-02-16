@@ -48,7 +48,7 @@ namespace WpfApp.Model
         }
         public string GetStringBirthday(DateTime dateTime)
         {
-            return dateTime.ToString();
+            return dateTime.ToString("dd.MM.yyyy");
         }
     }
 }

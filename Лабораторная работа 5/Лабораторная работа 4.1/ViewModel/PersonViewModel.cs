@@ -34,7 +34,7 @@ namespace WpfApp.ViewModel
         public ObservableCollection<Person> ListPerson { get; set; } //= new ObservableCollection<Person>();
         public ObservableCollection<PersonDPO> ListPersonDpo { get; set; } //= new ObservableCollection<PersonDPO>();
         public string Message { get; set; }
-        readonly string path = @"C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 5\Лабораторная работа 4.1\DataModels\PersonData.json";
+        readonly string path = @"C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 5\Лабораторная работа 4.1\DataModels\PersonData.json";
         string _jsonPersons = String.Empty;
         public string Error { get; set; }
         public ObservableCollection<Person> LoadPerson()
@@ -52,7 +52,8 @@ namespace WpfApp.ViewModel
         }
         private void SaveChanges(ObservableCollection<Person> listPersons)
         {
-            var jsonPerson = JsonConvert.SerializeObject(listPersons); try
+            var jsonPerson = JsonConvert.SerializeObject(listPersons); 
+            try
             {
                 using (StreamWriter writer = File.CreateText(path))
                 {
@@ -113,13 +114,10 @@ namespace WpfApp.ViewModel
                         Id = maxIdPerson,
                         Birthday = DateTime.Now,
                     };
-                    //roleViewModel = new RoleViewModel();
-                    //wnPerson.CbRole.ItemsSource = roleViewModel.ListRole;
-                    //wnPerson.CbRole.SelectedIndex = 0;
-                    wnPerson.DataContext = per;
                     roleViewModel = new RoleViewModel();
                     wnPerson.CbRole.ItemsSource = roleViewModel.ListRole;
                     wnPerson.CbRole.SelectedIndex = 0;
+                    wnPerson.DataContext = per;
                     if (wnPerson.ShowDialog() == true)
                     {
                         Role r = (Role)wnPerson.CbRole.SelectedValue;
@@ -158,14 +156,12 @@ namespace WpfApp.ViewModel
                     {
                         Title = "Редактирование данных сотрудника",
                     };
-                    roleViewModel = new RoleViewModel();
-                    //wnPerson.CbRole.ItemsSource = roleViewModel.ListRole;
-                    //wnPerson.CbRole.SelectedItem = wnPerson.CbRole.FindName(SelectedPersonDpo.RoleName);
                     PersonDPO personDpo = SelectedPersonDpo;
                     var tempPerson = personDpo.ShallowCopy();
-                    wnPerson.DataContext = tempPerson;
+                    roleViewModel = new RoleViewModel();
                     wnPerson.CbRole.ItemsSource = roleViewModel.ListRole;
-                    wnPerson.CbRole.SelectedItem = wnPerson.CbRole.FindName(SelectedPersonDpo.RoleName);
+                    wnPerson.CbRole.SelectedItem = wnPerson.CbRole.Items.Cast<Role>().FirstOrDefault(r => r.NameRole == personDpo.RoleName);
+                    wnPerson.DataContext = tempPerson;
                     if (wnPerson.ShowDialog() == true)
                     {
                         Role r = (Role)wnPerson.CbRole.SelectedValue;

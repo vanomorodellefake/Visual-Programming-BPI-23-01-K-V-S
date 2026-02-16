@@ -32,7 +32,7 @@ namespace WpfApp.ViewModel
             }
         }
         public ObservableCollection<Role> ListRole { get; set; } = new ObservableCollection<Role>();
-        readonly string path = @"C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 5\Лабораторная работа 4.1\DataModels\RoleData.json";
+        readonly string path = @"C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 5\Лабораторная работа 4.1\DataModels\RoleData.json";
         string _jsonRoles = String.Empty;
         public string Error { get; set; }
         public ObservableCollection<Role> LoadRole()
