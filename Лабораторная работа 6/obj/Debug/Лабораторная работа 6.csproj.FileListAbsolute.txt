@@ -1,0 +1,33 @@
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\obj\Debug\Лабораторная работа 6.csproj.AssemblyReference.cache
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\obj\Debug\MainWindow.g.cs
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\obj\Debug\App.g.cs
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\obj\Debug\Лабораторная работа 6_MarkupCompile.cache
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\obj\Debug\Лабораторная работа 6_MarkupCompile.lref
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\Лабораторная работа 6.exe.config
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\Лабораторная работа 6.exe
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\Лабораторная работа 6.pdb
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\CommunityToolkit.Mvvm.dll
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\System.Buffers.dll
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\System.Memory.dll
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\CommunityToolkit.Mvvm.pdb
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\CommunityToolkit.Mvvm.xml
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\System.Buffers.xml
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\System.Memory.xml
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\obj\Debug\MainWindow.baml
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\obj\Debug\Лабораторная работа 6.g.resources
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\obj\Debug\Лабораторная_работа_6.Properties.Resources.resources
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\obj\Debug\Лабораторная работа 6.csproj.GenerateResource.cache
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\obj\Debug\Лабораторная работа 6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\obj\Debug\Лабораторная работа 6.csproj.CoreCompileInputs.cache
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\obj\Debug\Лабораторная работа 6.csproj.CopyComplete
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\obj\Debug\Лабораторная работа 6.exe
+C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 6\obj\Debug\Лабораторная работа 6.pdb

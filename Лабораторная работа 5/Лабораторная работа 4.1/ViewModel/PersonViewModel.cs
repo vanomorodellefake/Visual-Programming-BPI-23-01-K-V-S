@@ -34,7 +34,7 @@ namespace WpfApp.ViewModel
         public ObservableCollection<Person> ListPerson { get; set; } //= new ObservableCollection<Person>();
         public ObservableCollection<PersonDPO> ListPersonDpo { get; set; } //= new ObservableCollection<PersonDPO>();
         public string Message { get; set; }
-        readonly string path = @"C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 5\Лабораторная работа 4.1\DataModels\PersonData.json";
+        readonly string path = @"C:\Users\vanomorodellefake\Desktop\Visual Programming\Visual-Programming-BPI-23-01\Лабораторная работа 5\Лабораторная работа 4.1\DataModels\PersonData.json";
         string _jsonPersons = String.Empty;
         public string Error { get; set; }
         public ObservableCollection<Person> LoadPerson()
