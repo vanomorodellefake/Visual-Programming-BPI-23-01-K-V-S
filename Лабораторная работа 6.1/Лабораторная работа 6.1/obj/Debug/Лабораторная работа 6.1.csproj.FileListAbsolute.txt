@@ -1,0 +1,33 @@
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\Лабораторная работа 6.1.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\Лабораторная_работа_6._1.Properties.Resources.resources
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\Лабораторная работа 6.1.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\Лабораторная работа 6.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\Лабораторная работа 6.1.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\Лабораторная работа 6.1.exe.config
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\Лабораторная работа 6.1.exe
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\Лабораторная работа 6.1.pdb
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\CommunityToolkit.Mvvm.dll
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\System.Buffers.dll
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\System.Memory.dll
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\CommunityToolkit.Mvvm.pdb
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\CommunityToolkit.Mvvm.xml
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\System.Buffers.xml
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\System.Memory.xml
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\App.g.cs
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\Лабораторная работа 6.1_MarkupCompile.cache
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\Лабораторная работа 6.1_MarkupCompile.lref
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\Лабораторная работа 6.1.g.resources
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\________.BD1B25B9.Up2Date
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\Лабораторная работа 6.1.exe
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\Лабораторная работа 6.1.pdb
