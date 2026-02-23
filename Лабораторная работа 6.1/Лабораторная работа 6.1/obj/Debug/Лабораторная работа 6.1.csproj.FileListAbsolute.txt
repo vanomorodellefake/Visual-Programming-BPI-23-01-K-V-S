@@ -31,3 +31,4 @@ C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторна�
 C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\________.BD1B25B9.Up2Date
 C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\Лабораторная работа 6.1.exe
 C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\Лабораторная работа 6.1.pdb
+C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 6.1\Лабораторная работа 6.1\obj\Debug\Лабораторная работа 6.1.exe.config

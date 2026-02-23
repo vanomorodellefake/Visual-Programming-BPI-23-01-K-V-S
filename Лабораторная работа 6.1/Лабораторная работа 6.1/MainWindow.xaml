@@ -5,9 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Лабораторная_работа_6._1"
         mc:Ignorable="d"
-        Title="Сравнение сортировок (многопоточность, Task)" Height="450" Width="600">
+        Title="Сравнение сортировок (многопоточность, Task)" Height="700" Width="650">
     <Grid Margin="10">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -23,29 +30,38 @@
         </Grid.ColumnDefinitions>
         <!-- Размер массива и кнопка генерации -->
         <Label Grid.Row="0" Grid.Column="0" Content="Размер массива:" Margin="3"/>
-        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding ArraySize,
-UpdateSourceTrigger=PropertyChanged}" Margin="3"/>
-        <Button Grid.Row="0" Grid.Column="2" Content="Сгенерировать" Command="{Binding
-GenerateArrayCommand}" Margin="3"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding ArraySize, UpdateSourceTrigger=PropertyChanged}" Margin="3"/>
+        <Button Grid.Row="0" Grid.Column="2" Content="Сгенерировать" Command="{Binding GenerateArrayCommand}" Margin="3"/>
         <!-- Отображение исходного массива -->
-        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding OriginalArrayString}"
-Margin="3" TextWrapping="Wrap"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding OriginalArrayString}" Margin="3" TextWrapping="Wrap"/>
         <!-- Кнопки запуска сортировок -->
-        <Button Grid.Row="2" Grid.Column="0" Content="Пузырьковая" Command="{Binding
-BubbleSortCommand}" Margin="3" Width="120"/>
-        <Button Grid.Row="2" Grid.Column="1" Content="Быстрая" Command="{Binding QuickSortCommand}"
-Margin="3" Width="120"/>
-        <Button Grid.Row="2" Grid.Column="2" Content="Вставками" Command="{Binding
-InsertionSortCommand}" Margin="3" Width="120"/>
+        <Button Grid.Row="2" Grid.Column="0" Content="Пузырьковая" Command="{Binding BubbleSortCommand}" Margin="3" Width="120"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="Быстрая" Command="{Binding QuickSortCommand}" Margin="3" Width="120"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="Вставками" Command="{Binding InsertionSortCommand}" Margin="3" Width="120"/>
+        <Button Grid.Row="3" Grid.Column="0" Content="Слиянием" Command="{Binding MergeSortCommand}" Margin="3" Width="120"/>
+        <Button Grid.Row="3" Grid.Column="1" Content="Отменить всё" Command="{Binding CancelAllCommand}" Margin="3" Width="120" Background="#FFDDA0A0"/>
+        <!-- Прогресс сортировок -->
+        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ProgressBar Grid.Column="0" Minimum="0" Maximum="100" Value="{Binding BubbleSortProgress}" Height="10" VerticalAlignment="Center"/>
+            <ProgressBar Grid.Column="2" Minimum="0" Maximum="100" Value="{Binding QuickSortProgress}" Height="10" VerticalAlignment="Center"/>
+            <ProgressBar Grid.Column="4" Minimum="0" Maximum="100" Value="{Binding InsertionSortProgress}" Height="10" VerticalAlignment="Center"/>
+            <ProgressBar Grid.Column="6" Minimum="0" Maximum="100" Value="{Binding MergeSortProgress}" Height="10" VerticalAlignment="Center"/>
+        </Grid>
         <!-- Результаты сортировок -->
-        <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding BubbleSortResult}"
-Margin="3" TextWrapping="Wrap"/>
-        <TextBlock Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding QuickSortResult}"
-Margin="3" TextWrapping="Wrap"/>
-        <TextBlock Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding InsertionSortResult}"
-Margin="3" TextWrapping="Wrap"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding BubbleSortResult}" Margin="3" TextWrapping="Wrap"/>
+        <TextBlock Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding QuickSortResult}" Margin="3" TextWrapping="Wrap"/>
+        <TextBlock Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding InsertionSortResult}" Margin="3" TextWrapping="Wrap"/>
+        <TextBlock Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding MergeSortResult}" Margin="3" TextWrapping="Wrap"/>
         <!-- Общее число сравнений -->
-        <TextBlock Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding TotalComparisons}"
-Margin="3" FontWeight="Bold"/>
+        <TextBlock Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding TotalComparisons}" Margin="3" FontWeight="Bold"/>
     </Grid>
 </Window>
