@@ -130,64 +130,72 @@ namespace Лабораторая_работа_6._2.ViewModel
         private bool CanSortMerge() => _originalArray != null && !_isSorting && !_isSorting;
 
         [RelayCommand(CanExecute = nameof(CanSortAll))]
-        private async Task SortAllAsync()
+        private void SortAll()
         {
-            if (_originalArray == null || _isSorting) return;
-
-            _isSorting = true;
-            _isCancelling = false;
-            _cancellationTokenSource = new CancellationTokenSource();
-            _sorter.ResetComparisons();
-
-            BubbleSortResult = "Сортируется...";
-            QuickSortResult = "Сортируется...";
-            InsertionSortResult = "Сортируется...";
-            MergeSortResult = "Сортируется...";
-            TotalExecutionTime = "Выполняется...";
-            BubbleSortProgress = QuickSortProgress = InsertionSortProgress = MergeSortProgress = 0;
-
-            SortAllCommand.NotifyCanExecuteChanged();
-
-            var watch = Stopwatch.StartNew();
-            var token = _cancellationTokenSource.Token;
-
-            try
+            new Thread(() =>
             {
-                var bubbleTask = Task.Run(() => _sorter.BubbleSort(_originalArray, token), token);
-                var quickTask = Task.Run(() => _sorter.QuickSort(_originalArray, token), token);
-                var insertionTask = Task.Run(() => _sorter.InsertionSort(_originalArray, token), token);
-                var mergeTask = Task.Run(() => _sorter.MergeSort(_originalArray, token), token);
+                if (_originalArray == null || _isSorting) return;
 
-                await Task.WhenAll(bubbleTask, quickTask, insertionTask, mergeTask);
-            }
-            catch (OperationCanceledException)
-            {
+                _isSorting = true;
+                _isCancelling = false;
+                _cancellationTokenSource = new CancellationTokenSource();
+                _sorter.ResetComparisons();
+
                 _uiContext.Post(_ =>
                 {
-                    TotalExecutionTime = "Сортировка прервана пользователем";
-                    _isCancelling = false;
-                    _isSorting = false;
+                    BubbleSortResult = "Сортируется...";
+                    QuickSortResult = "Сортируется...";
+                    InsertionSortResult = "Сортируется...";
+                    MergeSortResult = "Сортируется...";
+                    TotalExecutionTime = "Выполняется...";
+                    BubbleSortProgress = QuickSortProgress = InsertionSortProgress = MergeSortProgress = 0;
                     SortAllCommand.NotifyCanExecuteChanged();
-                    CancelSortingCommand.NotifyCanExecuteChanged();
                 }, null);
-                return;
-            }
-            finally
-            {
-                watch.Stop();
-                _cancellationTokenSource?.Dispose();
-                _cancellationTokenSource = null;
-            }
 
-            _uiContext.Post(_ =>
-            {
-                if (!_isCancelling)
-                    TotalExecutionTime = $"Общее время выполнения: {watch.Elapsed.TotalMilliseconds:F2} мс";
-                _isSorting = false;
-                _isCancelling = false;
-                SortAllCommand.NotifyCanExecuteChanged();
-                CancelSortingCommand.NotifyCanExecuteChanged();
-            }, null);
+                var watch = Stopwatch.StartNew();
+                var token = _cancellationTokenSource.Token;
+                var threads = new List<Thread>();
+
+                try
+                {
+                    threads.Add(new Thread(() => _sorter.BubbleSort(_originalArray, token)));
+                    threads.Add(new Thread(() => _sorter.QuickSort(_originalArray, token)));
+                    threads.Add(new Thread(() => _sorter.InsertionSort(_originalArray, token)));
+                    threads.Add(new Thread(() => _sorter.MergeSort(_originalArray, token)));
+
+                    threads.ForEach(t => t.Start());
+                    threads.ForEach(t => t.Join());
+
+                    watch.Stop();
+
+                    _uiContext.Post(_ =>
+                    {
+                        if (!_isCancelling)
+                            TotalExecutionTime = $"Общее время выполнения: {watch.Elapsed.TotalMilliseconds:F2} мс";
+                        _isSorting = false;
+                        _isCancelling = false;
+                        SortAllCommand.NotifyCanExecuteChanged();
+                        CancelSortingCommand.NotifyCanExecuteChanged();
+                    }, null);
+                }
+                catch (OperationCanceledException)
+                {
+                    _uiContext.Post(_ =>
+                    {
+                        TotalExecutionTime = "Сортировка прервана пользователем";
+                        _isCancelling = false;
+                        _isSorting = false;
+                        SortAllCommand.NotifyCanExecuteChanged();
+                        CancelSortingCommand.NotifyCanExecuteChanged();
+                    }, null);
+                }
+                finally
+                {
+                    _cancellationTokenSource?.Dispose();
+                    _cancellationTokenSource = null;
+                }
+            })
+            { IsBackground = true }.Start();
         }
         private bool CanSortAll() => _originalArray != null && !_isSorting && !_isCancelling;
 
