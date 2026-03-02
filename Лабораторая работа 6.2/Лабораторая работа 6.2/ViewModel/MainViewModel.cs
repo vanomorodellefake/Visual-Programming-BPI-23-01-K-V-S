@@ -98,34 +98,162 @@ namespace Лабораторая_работа_6._2.ViewModel
         [RelayCommand(CanExecute = nameof(CanSortBubble))]
         private void BubbleSort()
         {
+            _isSorting = true;
+            _isCancelling = false;
+            _cancellationTokenSource = new CancellationTokenSource();
+            _sorter.ResetComparisons();
+            
             BubbleSortResult = "Сортируется...";
             BubbleSortCommand.NotifyCanExecuteChanged();
-            new Thread(() => _sorter.BubbleSort(_originalArray)).Start();
+            CancelSortingCommand.NotifyCanExecuteChanged();
+            
+            new Thread(() =>
+            {
+                try
+                {
+                    _sorter.BubbleSort(_originalArray, _cancellationTokenSource.Token);
+                    _uiContext.Post(_ =>
+                    {
+                        _isSorting = false;
+                        _isCancelling = false;
+                        BubbleSortCommand.NotifyCanExecuteChanged();
+                        CancelSortingCommand.NotifyCanExecuteChanged();
+                    }, null);
+                }
+                catch (OperationCanceledException)
+                {
+                    _uiContext.Post(_ =>
+                    {
+                        BubbleSortResult = "Прервано";
+                        _isSorting = false;
+                        _isCancelling = false;
+                        BubbleSortCommand.NotifyCanExecuteChanged();
+                        CancelSortingCommand.NotifyCanExecuteChanged();
+                    }, null);
+                }
+            })
+            { IsBackground = true }.Start();
         }
         // Быстрая сортировка
         private bool CanSortQuick() => _originalArray != null && !_isSorting && !_isSorting;
         [RelayCommand(CanExecute = nameof(CanSortQuick))]
         private void QuickSort()
         {
+            _isSorting = true;
+            _isCancelling = false;
+            _cancellationTokenSource = new CancellationTokenSource();
+            _sorter.ResetComparisons();
+            
             QuickSortResult = "Сортируется...";
             QuickSortCommand.NotifyCanExecuteChanged();
-            new Thread(() => _sorter.QuickSort(_originalArray)).Start();
+            CancelSortingCommand.NotifyCanExecuteChanged();
+            
+            new Thread(() =>
+            {
+                try
+                {
+                    _sorter.QuickSort(_originalArray, _cancellationTokenSource.Token);
+                    _uiContext.Post(_ =>
+                    {
+                        _isSorting = false;
+                        _isCancelling = false;
+                        QuickSortCommand.NotifyCanExecuteChanged();
+                        CancelSortingCommand.NotifyCanExecuteChanged();
+                    }, null);
+                }
+                catch (OperationCanceledException)
+                {
+                    _uiContext.Post(_ =>
+                    {
+                        QuickSortResult = "Прервано";
+                        _isSorting = false;
+                        _isCancelling = false;
+                        QuickSortCommand.NotifyCanExecuteChanged();
+                        CancelSortingCommand.NotifyCanExecuteChanged();
+                    }, null);
+                }
+            })
+            { IsBackground = true }.Start();
         }
         // Сортировка вставками
         private bool CanSortInsertion() => _originalArray != null && !_isSorting && !_isSorting;
         [RelayCommand(CanExecute = nameof(CanSortInsertion))]
         private void InsertionSort()
         {
+            _isSorting = true;
+            _isCancelling = false;
+            _cancellationTokenSource = new CancellationTokenSource();
+            _sorter.ResetComparisons();
+            
             InsertionSortResult = "Сортируется...";
             InsertionSortCommand.NotifyCanExecuteChanged();
-            new Thread(() => _sorter.InsertionSort(_originalArray)).Start();
+            CancelSortingCommand.NotifyCanExecuteChanged();
+            
+            new Thread(() =>
+            {
+                try
+                {
+                    _sorter.InsertionSort(_originalArray, _cancellationTokenSource.Token);
+                    _uiContext.Post(_ =>
+                    {
+                        _isSorting = false;
+                        _isCancelling = false;
+                        InsertionSortCommand.NotifyCanExecuteChanged();
+                        CancelSortingCommand.NotifyCanExecuteChanged();
+                    }, null);
+                }
+                catch (OperationCanceledException)
+                {
+                    _uiContext.Post(_ =>
+                    {
+                        InsertionSortResult = "Прервано";
+                        _isSorting = false;
+                        _isCancelling = false;
+                        InsertionSortCommand.NotifyCanExecuteChanged();
+                        CancelSortingCommand.NotifyCanExecuteChanged();
+                    }, null);
+                }
+            })
+            { IsBackground = true }.Start();
         }
         [RelayCommand(CanExecute = nameof(CanSortMerge))]
         private void MergeSort()
         {
+            _isSorting = true;
+            _isCancelling = false;
+            _cancellationTokenSource = new CancellationTokenSource();
+            _sorter.ResetComparisons();
+            
             MergeSortResult = "Сортируется...";
             MergeSortCommand.NotifyCanExecuteChanged();
-            new Thread(() => _sorter.MergeSort(_originalArray)).Start();
+            CancelSortingCommand.NotifyCanExecuteChanged();
+            
+            new Thread(() =>
+            {
+                try
+                {
+                    _sorter.MergeSort(_originalArray, _cancellationTokenSource.Token);
+                    _uiContext.Post(_ =>
+                    {
+                        _isSorting = false;
+                        _isCancelling = false;
+                        MergeSortCommand.NotifyCanExecuteChanged();
+                        CancelSortingCommand.NotifyCanExecuteChanged();
+                    }, null);
+                }
+                catch (OperationCanceledException)
+                {
+                    _uiContext.Post(_ =>
+                    {
+                        MergeSortResult = "Прервано";
+                        _isSorting = false;
+                        _isCancelling = false;
+                        MergeSortCommand.NotifyCanExecuteChanged();
+                        CancelSortingCommand.NotifyCanExecuteChanged();
+                    }, null);
+                }
+            })
+            { IsBackground = true }.Start();
         }
         private bool CanSortMerge() => _originalArray != null && !_isSorting && !_isSorting;
 
