@@ -149,18 +149,16 @@ namespace Лабораторая_работа_6._2.ViewModel
             SortAllCommand.NotifyCanExecuteChanged();
 
             var watch = Stopwatch.StartNew();
-            var tasks = new List<Task>();
-            var semaphore = new Semaphore(4, 4);
             var token = _cancellationTokenSource.Token;
 
             try
             {
-                tasks.Add(Task.Run(() => RunSortWithSemaphore(() => _sorter.BubbleSort(_originalArray, token), semaphore, token), token));
-                tasks.Add(Task.Run(() => RunSortWithSemaphore(() => _sorter.QuickSort(_originalArray, token), semaphore, token), token));
-                tasks.Add(Task.Run(() => RunSortWithSemaphore(() => _sorter.InsertionSort(_originalArray, token), semaphore, token), token));
-                tasks.Add(Task.Run(() => RunSortWithSemaphore(() => _sorter.MergeSort(_originalArray, token), semaphore, token), token));
+                var bubbleTask = Task.Run(() => _sorter.BubbleSort(_originalArray, token), token);
+                var quickTask = Task.Run(() => _sorter.QuickSort(_originalArray, token), token);
+                var insertionTask = Task.Run(() => _sorter.InsertionSort(_originalArray, token), token);
+                var mergeTask = Task.Run(() => _sorter.MergeSort(_originalArray, token), token);
 
-                await Task.WhenAll(tasks);
+                await Task.WhenAll(bubbleTask, quickTask, insertionTask, mergeTask);
             }
             catch (OperationCanceledException)
             {
@@ -190,17 +188,6 @@ namespace Лабораторая_работа_6._2.ViewModel
                 SortAllCommand.NotifyCanExecuteChanged();
                 CancelSortingCommand.NotifyCanExecuteChanged();
             }, null);
-        }
-        private void RunSortWithSemaphore(Action sortAction, Semaphore semaphore, CancellationToken token)
-        {
-            if (token.IsCancellationRequested) return;
-            semaphore.WaitOne();
-            try
-            {
-                token.ThrowIfCancellationRequested();
-                sortAction();
-            }
-            finally { semaphore.Release(); }
         }
         private bool CanSortAll() => _originalArray != null && !_isSorting && !_isCancelling;
 
@@ -278,10 +265,10 @@ namespace Лабораторая_работа_6._2.ViewModel
         private readonly IProgress<double> _insertionSortProgressReporter;
         private readonly IProgress<double> _mergeSortProgressReporter;
         
-        private void OnBubbleSortProgress(int current, int total, double percent) => _bubbleSortProgressReporter.Report(percent);
-        private void OnQuickSortProgress(int current, int total, double percent) => _quickSortProgressReporter.Report(percent);
-        private void OnInsertionSortProgress(int current, int total, double percent) => _insertionSortProgressReporter.Report(percent);
-        private void OnMergeSortProgress(int current, int total, double percent) => _mergeSortProgressReporter.Report(percent);
+        private void OnBubbleSortProgress(double percent) => _bubbleSortProgressReporter.Report(percent);
+        private void OnQuickSortProgress(double percent) => _quickSortProgressReporter.Report(percent);
+        private void OnInsertionSortProgress(double percent) => _insertionSortProgressReporter.Report(percent);
+        private void OnMergeSortProgress(double percent) => _mergeSortProgressReporter.Report(percent);
 
     }
 }

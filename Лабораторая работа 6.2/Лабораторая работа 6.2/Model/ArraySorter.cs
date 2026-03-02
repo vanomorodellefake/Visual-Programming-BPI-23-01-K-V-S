@@ -19,7 +19,7 @@ namespace Лабораторая_работа_6._2.Model
         public event SortCompletedHandler MergeSortCompleted;
 
         // Делегаты и события для прогресса сортировки
-        public delegate void ProgressHandler(int current, int total, double percent);
+        public delegate void ProgressHandler(double percent);
         public event ProgressHandler BubbleSortProgress;
         public event ProgressHandler QuickSortProgress;
         public event ProgressHandler InsertionSortProgress;
@@ -62,12 +62,10 @@ namespace Лабораторая_работа_6._2.Model
 
             int totalIterations = array.Length * (array.Length - 1) / 2;
             int currentIteration = 0;
-            var progressWatch = System.Diagnostics.Stopwatch.StartNew();
-            int updateIntervalMs = 50;
             int updateIntervalIterations = Math.Max(1, totalIterations / 100);
 
             // Сообщаем о начале (0%)
-            BubbleSortProgress?.Invoke(0, totalIterations, 0);
+            BubbleSortProgress?.Invoke(0);
             for (int i = 0; i < array.Length - 1; i++)
             {
                 for (int j = 0; j < array.Length - 1 - i; j++)
@@ -87,11 +85,10 @@ namespace Лабораторая_работа_6._2.Model
                     currentIteration++;
                 }
 
-                if (progressWatch.ElapsedMilliseconds >= updateIntervalMs && currentIteration % updateIntervalIterations == 0)
+                if (currentIteration % updateIntervalIterations == 0)
                 {
                     int percent = currentIteration * 100 / totalIterations;
-                    BubbleSortProgress?.Invoke(currentIteration, totalIterations, percent);
-                    progressWatch.Restart();
+                    BubbleSortProgress?.Invoke(percent);
                 }
             }
             watch.Stop();
@@ -100,7 +97,7 @@ namespace Лабораторая_работа_6._2.Model
                 _totalComparisons += comparisons;
             }
             // Сообщаем о завершении (100%)
-            BubbleSortProgress?.Invoke(totalIterations, totalIterations, 100);
+            BubbleSortProgress?.Invoke(100);
             BubbleSortCompleted?.Invoke(array, comparisons, watch.Elapsed.TotalMilliseconds);
         }
         // Метод для быстрой сортировки (обёртка)
@@ -113,25 +110,21 @@ namespace Лабораторая_работа_6._2.Model
             int totalElements = array.Length;
             int processedElements = 0;
             int lastReportedPercent = -1;
-            var progressWatch = System.Diagnostics.Stopwatch.StartNew();
-            int updateIntervalMs = 50;
 
             // Сообщаем о начале (0%)
-            QuickSortProgress?.Invoke(0, totalElements, 0);
+            QuickSortProgress?.Invoke(0);
 
-            QuickSortRecursive(array, 0, array.Length - 1, ref comparisons, totalElements, ref processedElements, ref lastReportedPercent, progressWatch, updateIntervalMs, token);
+            QuickSortRecursive(array, 0, array.Length - 1, ref comparisons, totalElements, ref processedElements, ref lastReportedPercent, token);
             watch.Stop();
             lock (_locker)
             {
                 _totalComparisons += comparisons;
             }
             // Сообщаем о завершении (100%)
-            QuickSortProgress?.Invoke(totalElements, totalElements, 100);
+            QuickSortProgress?.Invoke(100);
             QuickSortCompleted?.Invoke(array, comparisons, watch.Elapsed.TotalMilliseconds);
         }
-        private void QuickSortRecursive(int[] arr, int left, int right, ref long comparisons, int totalElements, ref int processedElements, ref int lastReportedPercent, 
-            System.Diagnostics.Stopwatch progressWatch, 
-            int updateIntervalMs, 
+        private void QuickSortRecursive(int[] arr, int left, int right, ref long comparisons, int totalElements, ref int processedElements, ref int lastReportedPercent,
             CancellationToken token = default)
         {
             if (left < right)
@@ -143,18 +136,17 @@ namespace Лабораторая_работа_6._2.Model
 
                 int pivotIndex = Partition(arr, left, right, ref comparisons);
 
-                QuickSortRecursive(arr, left, pivotIndex - 1, ref comparisons, totalElements, ref processedElements, ref lastReportedPercent, progressWatch, updateIntervalMs);
-                QuickSortRecursive(arr, pivotIndex + 1, right, ref comparisons, totalElements, ref processedElements, ref lastReportedPercent, progressWatch, updateIntervalMs);
+                QuickSortRecursive(arr, left, pivotIndex - 1, ref comparisons, totalElements, ref processedElements, ref lastReportedPercent, token);
+                QuickSortRecursive(arr, pivotIndex + 1, right, ref comparisons, totalElements, ref processedElements, ref lastReportedPercent, token);
 
                 processedElements += (right - left + 1);
                 int percent = Math.Min(processedElements * 100 / totalElements, 100);
 
-                // Обновляем прогресс только если прошло достаточно времени и процент изменился
-                if (progressWatch.ElapsedMilliseconds >= updateIntervalMs && percent != lastReportedPercent && percent > lastReportedPercent)
+                // Обновляем прогресс только если процент изменился
+                if (percent != lastReportedPercent && percent > lastReportedPercent)
                 {
-                    QuickSortProgress?.Invoke(processedElements, totalElements, percent);
+                    QuickSortProgress?.Invoke(percent);
                     lastReportedPercent = percent;
-                    progressWatch.Restart();
                 }
             }
         }
@@ -186,12 +178,10 @@ namespace Лабораторая_работа_6._2.Model
 
             var watch = System.Diagnostics.Stopwatch.StartNew();
             int totalIterations = array.Length;
-            var progressWatch = System.Diagnostics.Stopwatch.StartNew();
-            int updateIntervalMs = 50;
             int updateIntervalIterations = Math.Max(1, totalIterations / 100);
 
             // Сообщаем о начале (0%)
-            InsertionSortProgress?.Invoke(0, totalIterations, 0);
+            InsertionSortProgress?.Invoke(0);
 
             for (int i = 1; i < array.Length; i++)
             {
@@ -211,11 +201,10 @@ namespace Лабораторая_работа_6._2.Model
                 comparisons++; // учёт последнего сравнения, когда условие не выполнено
                 array[j + 1] = key;
 
-                if (progressWatch.ElapsedMilliseconds >= updateIntervalMs && i % updateIntervalIterations == 0)
+                if (i % updateIntervalIterations == 0)
                 {
                     int percent = i * 100 / totalIterations;
-                    InsertionSortProgress?.Invoke(i, totalIterations, percent);
-                    progressWatch.Restart();
+                    InsertionSortProgress?.Invoke(percent);
                 }
             }
             watch.Stop();
@@ -224,7 +213,7 @@ namespace Лабораторая_работа_6._2.Model
                 _totalComparisons += comparisons;
             }
             // Сообщаем о завершении (100%)
-            InsertionSortProgress?.Invoke(totalIterations, totalIterations, 100);
+            InsertionSortProgress?.Invoke(100);
             InsertionSortCompleted?.Invoke(array, comparisons, watch.Elapsed.TotalMilliseconds);
         }
 
@@ -238,24 +227,22 @@ namespace Лабораторая_работа_6._2.Model
             int totalElements = array.Length;
             int processedElements = 0;
             int lastReportedPercent = -1;
-            int updateIntervalMs = 50;
-            var progressWatch = System.Diagnostics.Stopwatch.StartNew();
 
             // Сообщаем о начале (0%)
-            MergeSortProgress?.Invoke(0, totalElements, 0);
+            MergeSortProgress?.Invoke(0);
 
-            MergeSortRecursive(array, 0, array.Length - 1, ref comparisons, totalElements, ref processedElements, ref lastReportedPercent, progressWatch, updateIntervalMs, token);
+            MergeSortRecursive(array, 0, array.Length - 1, ref comparisons, totalElements, ref processedElements, ref lastReportedPercent, token);
             watch.Stop();
             lock (_locker)
             {
                 _totalComparisons += comparisons;
             }
             // Сообщаем о завершении (100%)
-            MergeSortProgress?.Invoke(totalElements, totalElements, 100);
+            MergeSortProgress?.Invoke(100);
             MergeSortCompleted?.Invoke(array, comparisons, watch.Elapsed.TotalMilliseconds);
         }
 
-        private void MergeSortRecursive(int[] arr, int left, int right, ref long comparisons, int totalElements, ref int processedElements, ref int lastReportedPercent, System.Diagnostics.Stopwatch progressWatch, int updateIntervalMs, CancellationToken token = default)
+        private void MergeSortRecursive(int[] arr, int left, int right, ref long comparisons, int totalElements, ref int processedElements, ref int lastReportedPercent, CancellationToken token = default)
         {
             if (left < right)
             {
@@ -265,19 +252,18 @@ namespace Лабораторая_работа_6._2.Model
                 }
 
                 int mid = left + (right - left) / 2;
-                MergeSortRecursive(arr, left, mid, ref comparisons, totalElements, ref processedElements, ref lastReportedPercent, progressWatch, updateIntervalMs, token);
-                MergeSortRecursive(arr, mid + 1, right, ref comparisons, totalElements, ref processedElements, ref lastReportedPercent, progressWatch, updateIntervalMs, token);
+                MergeSortRecursive(arr, left, mid, ref comparisons, totalElements, ref processedElements, ref lastReportedPercent, token);
+                MergeSortRecursive(arr, mid + 1, right, ref comparisons, totalElements, ref processedElements, ref lastReportedPercent, token);
                 Merge(arr, left, mid, right, ref comparisons);
 
                 processedElements += (right - left + 1);
                 int percent = processedElements * 100 / totalElements;
 
-                // Обновляем прогресс только если прошло достаточно времени и процент изменился
-                if (progressWatch.ElapsedMilliseconds >= updateIntervalMs && percent != lastReportedPercent && percent > lastReportedPercent)
+                // Обновляем прогресс только если процент изменился
+                if (percent != lastReportedPercent && percent > lastReportedPercent)
                 {
-                    MergeSortProgress?.Invoke(processedElements, totalElements, percent);
+                    MergeSortProgress?.Invoke(percent);
                     lastReportedPercent = percent;
-                    progressWatch.Restart();
                 }
             }
         }
