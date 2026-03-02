@@ -40,19 +40,26 @@ namespace Лабораторая_работа_6._2.ViewModel
         private bool _isCancelling = false;
         // ProgressBar
         [ObservableProperty]
-        private double _bubbleSortProgress = 0;
+        private double _bubbleSortProgress;
         [ObservableProperty]
-        private double _quickSortProgress = 0;
+        private double _quickSortProgress;
         [ObservableProperty]
-        private double _insertionSortProgress = 0;
+        private double _insertionSortProgress;
         [ObservableProperty]
-        private double _mergeSortProgress = 0;
+        private double _mergeSortProgress;
         [ObservableProperty]
-        private bool _isSorting = false;
+        private bool _isSorting;
         public MainViewModel()
         {
             _sorter = new ArraySorter();
             _uiContext = SynchronizationContext.Current ?? new SynchronizationContext();
+            
+            // Инициализация Progress<double> для обновления ProgressBar в UI потоке
+            _bubbleSortProgressReporter = new Progress<double>(value => BubbleSortProgress = value);
+            _quickSortProgressReporter = new Progress<double>(value => QuickSortProgress = value);
+            _insertionSortProgressReporter = new Progress<double>(value => InsertionSortProgress = value);
+            _mergeSortProgressReporter = new Progress<double>(value => MergeSortProgress = value);
+            
             // Подписка на события завершения сортировки
             _sorter.BubbleSortCompleted += OnBubbleSortCompleted;
             _sorter.QuickSortCompleted += OnQuickSortCompleted;
@@ -264,10 +271,17 @@ namespace Лабораторая_работа_6._2.ViewModel
         }
         private void UpdateTotalComparisons() => TotalComparisons = $"Общее число сравнений: {_sorter.TotalComparisons}";
         private string FormatArray(int[] arr) => arr.Length <= 10 ? string.Join(", ", arr) : string.Join(", ", arr, 0, 5) + "...";
-        private void OnBubbleSortProgress(int current, int total, double percent) => _uiContext.Post(_ => BubbleSortProgress = percent, null);
-        private void OnQuickSortProgress(int current, int total, double percent) => _uiContext.Post(_ => QuickSortProgress = percent, null);
-        private void OnInsertionSortProgress(int current, int total, double percent) => _uiContext.Post(_ => InsertionSortProgress = percent, null);
-        private void OnMergeSortProgress(int current, int total, double percent) => _uiContext.Post(_ => MergeSortProgress = percent, null);
+        
+        // IProgress<double> для обновления ProgressBar
+        private readonly IProgress<double> _bubbleSortProgressReporter;
+        private readonly IProgress<double> _quickSortProgressReporter;
+        private readonly IProgress<double> _insertionSortProgressReporter;
+        private readonly IProgress<double> _mergeSortProgressReporter;
+        
+        private void OnBubbleSortProgress(int current, int total, double percent) => _bubbleSortProgressReporter.Report(percent);
+        private void OnQuickSortProgress(int current, int total, double percent) => _quickSortProgressReporter.Report(percent);
+        private void OnInsertionSortProgress(int current, int total, double percent) => _insertionSortProgressReporter.Report(percent);
+        private void OnMergeSortProgress(int current, int total, double percent) => _mergeSortProgressReporter.Report(percent);
 
     }
 }
