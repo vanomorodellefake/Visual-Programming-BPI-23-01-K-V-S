@@ -462,12 +462,16 @@ namespace Лабораторая_работа_6._2.ViewModel
             _sorter.ResetComparisons();
 
             BubbleSortResultAsync = "[ASYNC] Сортируется...";
+            BubbleSortProgressAsync = 0;
             BubbleSortAsyncCommand.NotifyCanExecuteChanged();
             CancelSortingCommand.NotifyCanExecuteChanged();
 
+            var progress = new Progress<int>(percent => BubbleSortProgressAsync = percent);
+
             try
             {
-                await _sorter.BubbleSortAsync(_originalArray, _cancellationTokenSource.Token);
+                var result = await _sorter.BubbleSortAsync(_originalArray, progress, _cancellationTokenSource.Token);
+                BubbleSortResultAsync = $"[ASYNC] Пузырьковая: {FormatArray(result.SortedArray)}, время: {result.ElapsedMilliseconds:F2} мс, сравнений: {result.Comparisons}";
             }
             catch (OperationCanceledException)
             {
@@ -490,12 +494,16 @@ namespace Лабораторая_работа_6._2.ViewModel
             _sorter.ResetComparisons();
 
             QuickSortResultAsync = "[ASYNC] Сортируется...";
+            QuickSortProgressAsync = 0;
             QuickSortAsyncCommand.NotifyCanExecuteChanged();
             CancelSortingCommand.NotifyCanExecuteChanged();
 
+            var progress = new Progress<int>(percent => QuickSortProgressAsync = percent);
+
             try
             {
-                await _sorter.QuickSortAsync(_originalArray, _cancellationTokenSource.Token);
+                var result = await _sorter.QuickSortAsync(_originalArray, progress, _cancellationTokenSource.Token);
+                QuickSortResultAsync = $"[ASYNC] Быстрая: {FormatArray(result.SortedArray)}, время: {result.ElapsedMilliseconds:F2} мс, сравнений: {result.Comparisons}";
             }
             catch (OperationCanceledException)
             {
@@ -518,12 +526,16 @@ namespace Лабораторая_работа_6._2.ViewModel
             _sorter.ResetComparisons();
 
             InsertionSortResultAsync = "[ASYNC] Сортируется...";
+            InsertionSortProgressAsync = 0;
             InsertionSortAsyncCommand.NotifyCanExecuteChanged();
             CancelSortingCommand.NotifyCanExecuteChanged();
 
+            var progress = new Progress<int>(percent => InsertionSortProgressAsync = percent);
+
             try
             {
-                await _sorter.InsertionSortAsync(_originalArray, _cancellationTokenSource.Token);
+                var result = await _sorter.InsertionSortAsync(_originalArray, progress, _cancellationTokenSource.Token);
+                InsertionSortResultAsync = $"[ASYNC] Вставками: {FormatArray(result.SortedArray)}, время: {result.ElapsedMilliseconds:F2} мс, сравнений: {result.Comparisons}";
             }
             catch (OperationCanceledException)
             {
@@ -546,12 +558,16 @@ namespace Лабораторая_работа_6._2.ViewModel
             _sorter.ResetComparisons();
 
             MergeSortResultAsync = "[ASYNC] Сортируется...";
+            MergeSortProgressAsync = 0;
             MergeSortAsyncCommand.NotifyCanExecuteChanged();
             CancelSortingCommand.NotifyCanExecuteChanged();
 
+            var progress = new Progress<int>(percent => MergeSortProgressAsync = percent);
+
             try
             {
-                await _sorter.MergeSortAsync(_originalArray, _cancellationTokenSource.Token);
+                var result = await _sorter.MergeSortAsync(_originalArray, progress, _cancellationTokenSource.Token);
+                MergeSortResultAsync = $"[ASYNC] Слиянием: {FormatArray(result.SortedArray)}, время: {result.ElapsedMilliseconds:F2} мс, сравнений: {result.Comparisons}";
             }
             catch (OperationCanceledException)
             {
@@ -583,20 +599,33 @@ namespace Лабораторая_работа_6._2.ViewModel
             BubbleSortProgressAsync = QuickSortProgressAsync = InsertionSortProgressAsync = MergeSortProgressAsync = 0;
 
             SortAllAsyncCommand.NotifyCanExecuteChanged();
+            CancelSortingCommand.NotifyCanExecuteChanged();
+
+            var progressBubble = new Progress<int>(percent => BubbleSortProgressAsync = percent);
+            var progressQuick = new Progress<int>(percent => QuickSortProgressAsync = percent);
+            var progressInsertion = new Progress<int>(percent => InsertionSortProgressAsync = percent);
+            var progressMerge = new Progress<int>(percent => MergeSortProgressAsync = percent);
 
             var watch = Stopwatch.StartNew();
             var token = _cancellationTokenSource.Token;
 
             try
             {
-                var bubbleTask = _sorter.BubbleSortAsync(_originalArray, token);
-                var quickTask = _sorter.QuickSortAsync(_originalArray, token);
-                var insertionTask = _sorter.InsertionSortAsync(_originalArray, token);
-                var mergeTask = _sorter.MergeSortAsync(_originalArray, token);
+                var bubbleTask = _sorter.BubbleSortAsync(_originalArray, progressBubble, token);
+                var quickTask = _sorter.QuickSortAsync(_originalArray, progressQuick, token);
+                var insertionTask = _sorter.InsertionSortAsync(_originalArray, progressInsertion, token);
+                var mergeTask = _sorter.MergeSortAsync(_originalArray, progressMerge, token);
 
-                await Task.WhenAll(bubbleTask, quickTask, insertionTask, mergeTask);
+                var results = await Task.WhenAll(bubbleTask, quickTask, insertionTask, mergeTask);
 
                 watch.Stop();
+
+                // Обновляем результаты каждой сортировки
+                BubbleSortResultAsync = $"[ASYNC] Пузырьковая: {FormatArray(results[0].SortedArray)}, время: {results[0].ElapsedMilliseconds:F2} мс, сравнений: {results[0].Comparisons}";
+                QuickSortResultAsync = $"[ASYNC] Быстрая: {FormatArray(results[1].SortedArray)}, время: {results[1].ElapsedMilliseconds:F2} мс, сравнений: {results[1].Comparisons}";
+                InsertionSortResultAsync = $"[ASYNC] Вставками: {FormatArray(results[2].SortedArray)}, время: {results[2].ElapsedMilliseconds:F2} мс, сравнений: {results[2].Comparisons}";
+                MergeSortResultAsync = $"[ASYNC] Слиянием: {FormatArray(results[3].SortedArray)}, время: {results[3].ElapsedMilliseconds:F2} мс, сравнений: {results[3].Comparisons}";
+
                 TotalComparisonsAsync = $"[ASYNC] Общее число сравнений: {_sorter.TotalComparisons}";
 
                 if (!_isCancelling)

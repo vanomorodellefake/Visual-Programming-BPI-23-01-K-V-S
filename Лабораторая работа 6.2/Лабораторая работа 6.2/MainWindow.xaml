@@ -54,7 +54,7 @@
     <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding OriginalArrayString}" Margin="3" TextWrapping="Wrap"/>
     
     <!-- === Thread версия === -->
-    <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Text="=== Thread версия (new Thread) ===" Margin="3" FontWeight="Bold" FontStyle="Italic"/>
+    <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Text="ЦThread" Margin="3"/>
 
     <!-- Кнопки запуска сортировок (Thread) -->
     <Button Grid.Row="3" Grid.Column="2" Content="Запустить все (Thread)" Command="{Binding SortAllCommand}" Margin="3" FontWeight="Bold"/>
@@ -77,7 +77,7 @@
     <ProgressBar Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="4" Value="{Binding MergeSortProgress}" Minimum="0" Maximum="100" Height="20" Margin="3"/>
     
     <!-- === Async версия === -->
-    <TextBlock Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="4" Text="=== Async версия (async/await) ===" Margin="3" FontWeight="Bold" FontStyle="Italic"/>
+    <TextBlock Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="4" Text="Async" Margin="3"/>
 
     <!-- Кнопки запуска сортировок (Async) -->
     <Button Grid.Row="14" Grid.Column="2" Content="Запустить все (Async)" Command="{Binding SortAllAsyncCommand}" Margin="3" FontWeight="Bold"/>
