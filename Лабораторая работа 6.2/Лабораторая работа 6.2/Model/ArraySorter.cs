@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace Лабораторая_работа_6._2.Model
 {
-    public class ArraySorter
+    public partial class ArraySorter
     {
         // Общий счётчик сравнений (разделяемый ресурс)
         private long _totalComparisons;

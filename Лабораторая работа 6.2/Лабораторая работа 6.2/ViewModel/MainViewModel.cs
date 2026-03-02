@@ -34,6 +34,11 @@ namespace Лабораторая_работа_6._2.ViewModel
         private string _totalComparisons = "Общее число сравнений: 0";
         [ObservableProperty]
         private string _totalExecutionTime = "Общее время выполнения: 0 мс";
+        // Для Async версии
+        [ObservableProperty]
+        private string _totalComparisonsAsync = "Общее число сравнений: 0";
+        [ObservableProperty]
+        private string _totalExecutionTimeAsync = "Общее время выполнения: 0 мс";
         [ObservableProperty]
         private bool _canGenerate = true;
         [ObservableProperty]
@@ -70,6 +75,7 @@ namespace Лабораторая_работа_6._2.ViewModel
             _sorter.QuickSortProgress += OnQuickSortProgress;
             _sorter.InsertionSortProgress += OnInsertionSortProgress;
             _sorter.MergeSortProgress += OnMergeSortProgress;
+
         }
         // Команда генерации массива
         [RelayCommand(CanExecute = nameof(CanGenerateArray))]
@@ -79,18 +85,28 @@ namespace Лабораторая_работа_6._2.ViewModel
             // Отображаем первые 20 элементов
             OriginalArrayString = "Исходный массив: " + string.Join(", ", _originalArray, 0, Math.Min(20,
            _originalArray.Length)) + (ArraySize > 20 ? "..." : "");
-            // Сбрасываем предыдущие результаты
+            // Сбрасываем предыдущие результаты (Thread)
             BubbleSortResult = QuickSortResult = InsertionSortResult = MergeSortResult = null;
             BubbleSortProgress = QuickSortProgress = InsertionSortProgress = MergeSortProgress = 0;
             TotalComparisons = "Общее число сравнений: 0";
             TotalExecutionTime = "Общее время выполнения: 0 мс";
-            // Обновляем состояние команд сортировок
+            // Сбрасываем предыдущие результаты (Async)
+            BubbleSortResultAsync = QuickSortResultAsync = InsertionSortResultAsync = MergeSortResultAsync = null;
+            BubbleSortProgressAsync = QuickSortProgressAsync = InsertionSortProgressAsync = MergeSortProgressAsync = 0;
+            TotalComparisonsAsync = "Общее число сравнений: 0";
+            TotalExecutionTimeAsync = "Общее время выполнения: 0 мс";
+            // Обновляем состояние команд сортировок (Thread)
             BubbleSortCommand.NotifyCanExecuteChanged();
             QuickSortCommand.NotifyCanExecuteChanged();
             InsertionSortCommand.NotifyCanExecuteChanged();
             MergeSortCommand.NotifyCanExecuteChanged();
-
             SortAllCommand.NotifyCanExecuteChanged();
+            // Обновляем состояние команд сортировок (Async)
+            BubbleSortAsyncCommand.NotifyCanExecuteChanged();
+            QuickSortAsyncCommand.NotifyCanExecuteChanged();
+            InsertionSortAsyncCommand.NotifyCanExecuteChanged();
+            MergeSortAsyncCommand.NotifyCanExecuteChanged();
+            SortAllAsyncCommand.NotifyCanExecuteChanged();
         }
         private bool CanGenerateArray() => CanGenerate;
         // Пузырьковая сортировка
@@ -394,17 +410,218 @@ namespace Лабораторая_работа_6._2.ViewModel
         }
         private void UpdateTotalComparisons() => TotalComparisons = $"Общее число сравнений: {_sorter.TotalComparisons}";
         private string FormatArray(int[] arr) => arr.Length <= 10 ? string.Join(", ", arr) : string.Join(", ", arr, 0, 5) + "...";
-        
+
         // IProgress<double> для обновления ProgressBar
         private readonly IProgress<double> _bubbleSortProgressReporter;
         private readonly IProgress<double> _quickSortProgressReporter;
         private readonly IProgress<double> _insertionSortProgressReporter;
         private readonly IProgress<double> _mergeSortProgressReporter;
-        
+
         private void OnBubbleSortProgress(double percent) => _bubbleSortProgressReporter.Report(percent);
         private void OnQuickSortProgress(double percent) => _quickSortProgressReporter.Report(percent);
         private void OnInsertionSortProgress(double percent) => _insertionSortProgressReporter.Report(percent);
         private void OnMergeSortProgress(double percent) => _mergeSortProgressReporter.Report(percent);
 
+        // === Async версии методов ===
+        // Свойства для Async версии
+        [ObservableProperty]
+        private string _bubbleSortResultAsync;
+        [ObservableProperty]
+        private string _quickSortResultAsync;
+        [ObservableProperty]
+        private string _insertionSortResultAsync;
+        [ObservableProperty]
+        private string _mergeSortResultAsync;
+        [ObservableProperty]
+        private double _bubbleSortProgressAsync;
+        [ObservableProperty]
+        private double _quickSortProgressAsync;
+        [ObservableProperty]
+        private double _insertionSortProgressAsync;
+        [ObservableProperty]
+        private double _mergeSortProgressAsync;
+
+        // Async команды (созданные вручную)
+        private IAsyncRelayCommand? _bubbleSortAsyncCommand;
+        private IAsyncRelayCommand? _quickSortAsyncCommand;
+        private IAsyncRelayCommand? _insertionSortAsyncCommand;
+        private IAsyncRelayCommand? _mergeSortAsyncCommand;
+        private IAsyncRelayCommand? _sortAllAsyncCommand;
+
+        public IAsyncRelayCommand BubbleSortAsyncCommand => _bubbleSortAsyncCommand ??= new AsyncRelayCommand(BubbleSortAsyncRun, CanSortBubbleAsync);
+        public IAsyncRelayCommand QuickSortAsyncCommand => _quickSortAsyncCommand ??= new AsyncRelayCommand(QuickSortAsyncRun, CanSortQuickAsync);
+        public IAsyncRelayCommand InsertionSortAsyncCommand => _insertionSortAsyncCommand ??= new AsyncRelayCommand(InsertionSortAsyncRun, CanSortInsertionAsync);
+        public IAsyncRelayCommand MergeSortAsyncCommand => _mergeSortAsyncCommand ??= new AsyncRelayCommand(MergeSortAsyncRun, CanSortMergeAsync);
+        public IAsyncRelayCommand SortAllAsyncCommand => _sortAllAsyncCommand ??= new AsyncRelayCommand(SortAllAsyncRun, CanSortAllAsync);
+
+        private async Task BubbleSortAsyncRun()
+        {
+            _isSorting = true;
+            _isCancelling = false;
+            _cancellationTokenSource = new CancellationTokenSource();
+            _sorter.ResetComparisons();
+
+            BubbleSortResultAsync = "[ASYNC] Сортируется...";
+            BubbleSortAsyncCommand.NotifyCanExecuteChanged();
+            CancelSortingCommand.NotifyCanExecuteChanged();
+
+            try
+            {
+                await _sorter.BubbleSortAsync(_originalArray, _cancellationTokenSource.Token);
+            }
+            catch (OperationCanceledException)
+            {
+                BubbleSortResultAsync = "[ASYNC] Прервано";
+            }
+            finally
+            {
+                _isSorting = false;
+                _isCancelling = false;
+                BubbleSortAsyncCommand.NotifyCanExecuteChanged();
+                CancelSortingCommand.NotifyCanExecuteChanged();
+            }
+        }
+
+        private async Task QuickSortAsyncRun()
+        {
+            _isSorting = true;
+            _isCancelling = false;
+            _cancellationTokenSource = new CancellationTokenSource();
+            _sorter.ResetComparisons();
+
+            QuickSortResultAsync = "[ASYNC] Сортируется...";
+            QuickSortAsyncCommand.NotifyCanExecuteChanged();
+            CancelSortingCommand.NotifyCanExecuteChanged();
+
+            try
+            {
+                await _sorter.QuickSortAsync(_originalArray, _cancellationTokenSource.Token);
+            }
+            catch (OperationCanceledException)
+            {
+                QuickSortResultAsync = "[ASYNC] Прервано";
+            }
+            finally
+            {
+                _isSorting = false;
+                _isCancelling = false;
+                QuickSortAsyncCommand.NotifyCanExecuteChanged();
+                CancelSortingCommand.NotifyCanExecuteChanged();
+            }
+        }
+
+        private async Task InsertionSortAsyncRun()
+        {
+            _isSorting = true;
+            _isCancelling = false;
+            _cancellationTokenSource = new CancellationTokenSource();
+            _sorter.ResetComparisons();
+
+            InsertionSortResultAsync = "[ASYNC] Сортируется...";
+            InsertionSortAsyncCommand.NotifyCanExecuteChanged();
+            CancelSortingCommand.NotifyCanExecuteChanged();
+
+            try
+            {
+                await _sorter.InsertionSortAsync(_originalArray, _cancellationTokenSource.Token);
+            }
+            catch (OperationCanceledException)
+            {
+                InsertionSortResultAsync = "[ASYNC] Прервано";
+            }
+            finally
+            {
+                _isSorting = false;
+                _isCancelling = false;
+                InsertionSortAsyncCommand.NotifyCanExecuteChanged();
+                CancelSortingCommand.NotifyCanExecuteChanged();
+            }
+        }
+
+        private async Task MergeSortAsyncRun()
+        {
+            _isSorting = true;
+            _isCancelling = false;
+            _cancellationTokenSource = new CancellationTokenSource();
+            _sorter.ResetComparisons();
+
+            MergeSortResultAsync = "[ASYNC] Сортируется...";
+            MergeSortAsyncCommand.NotifyCanExecuteChanged();
+            CancelSortingCommand.NotifyCanExecuteChanged();
+
+            try
+            {
+                await _sorter.MergeSortAsync(_originalArray, _cancellationTokenSource.Token);
+            }
+            catch (OperationCanceledException)
+            {
+                MergeSortResultAsync = "[ASYNC] Прервано";
+            }
+            finally
+            {
+                _isSorting = false;
+                _isCancelling = false;
+                MergeSortAsyncCommand.NotifyCanExecuteChanged();
+                CancelSortingCommand.NotifyCanExecuteChanged();
+            }
+        }
+
+        private async Task SortAllAsyncRun()
+        {
+            if (_originalArray == null || _isSorting) return;
+
+            _isSorting = true;
+            _isCancelling = false;
+            _cancellationTokenSource = new CancellationTokenSource();
+            _sorter.ResetComparisons();
+
+            BubbleSortResultAsync = "[ASYNC] Сортируется...";
+            QuickSortResultAsync = "[ASYNC] Сортируется...";
+            InsertionSortResultAsync = "[ASYNC] Сортируется...";
+            MergeSortResultAsync = "[ASYNC] Сортируется...";
+            TotalExecutionTimeAsync = "[ASYNC] Выполняется...";
+            BubbleSortProgressAsync = QuickSortProgressAsync = InsertionSortProgressAsync = MergeSortProgressAsync = 0;
+
+            SortAllAsyncCommand.NotifyCanExecuteChanged();
+
+            var watch = Stopwatch.StartNew();
+            var token = _cancellationTokenSource.Token;
+
+            try
+            {
+                var bubbleTask = _sorter.BubbleSortAsync(_originalArray, token);
+                var quickTask = _sorter.QuickSortAsync(_originalArray, token);
+                var insertionTask = _sorter.InsertionSortAsync(_originalArray, token);
+                var mergeTask = _sorter.MergeSortAsync(_originalArray, token);
+
+                await Task.WhenAll(bubbleTask, quickTask, insertionTask, mergeTask);
+
+                watch.Stop();
+                TotalComparisonsAsync = $"[ASYNC] Общее число сравнений: {_sorter.TotalComparisons}";
+
+                if (!_isCancelling)
+                    TotalExecutionTimeAsync = $"[ASYNC] Общее время выполнения: {watch.Elapsed.TotalMilliseconds:F2} мс";
+            }
+            catch (OperationCanceledException)
+            {
+                TotalExecutionTimeAsync = "[ASYNC] Сортировка прервана пользователем";
+            }
+            finally
+            {
+                _cancellationTokenSource?.Dispose();
+                _cancellationTokenSource = null;
+                _isSorting = false;
+                _isCancelling = false;
+                SortAllAsyncCommand.NotifyCanExecuteChanged();
+                CancelSortingCommand.NotifyCanExecuteChanged();
+            }
+        }
+
+        // Удалить старые методы с атрибутами
+        private bool CanSortBubbleAsync() => _originalArray != null && !_isSorting && !_isCancelling;
+        private bool CanSortQuickAsync() => _originalArray != null && !_isSorting && !_isCancelling;
+        private bool CanSortInsertionAsync() => _originalArray != null && !_isSorting && !_isCancelling;
+        private bool CanSortMergeAsync() => _originalArray != null && !_isSorting && !_isCancelling;
+        private bool CanSortAllAsync() => _originalArray != null && !_isSorting && !_isCancelling;
     }
 }

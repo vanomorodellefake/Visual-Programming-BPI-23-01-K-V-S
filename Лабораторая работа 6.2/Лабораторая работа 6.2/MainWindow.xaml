@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Лабораторная_работа_6"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Сравнение сортировок (многопоточность)" Height="450" Width="600">
+        Title="Сравнение сортировок (многопоточность)" Height="850" Width="600">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
     <Grid Margin="10">
     <Grid.RowDefinitions>
         <RowDefinition Height="Auto"/>
@@ -21,40 +22,90 @@
         <RowDefinition Height="Auto"/>
         <RowDefinition Height="Auto"/>
         <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="Auto"/>
         <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="Auto"/>
     </Grid.ColumnDefinitions>
     <!-- Размер массива и кнопка генерации -->
     <Label Grid.Row="0" Grid.Column="0" Content="Размер массива:" Margin="3"/>
     <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ArraySize, UpdateSourceTrigger=PropertyChanged}" Margin="3"/>
     <Button Grid.Row="0" Grid.Column="3" Content="Сгенерировать" Command="{Binding GenerateArrayCommand}" Margin="3"/>
+    
     <!-- Отображение исходного массива -->
-    <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding OriginalArrayString}" Margin="3" TextWrapping="Wrap"/>
-    <!-- Кнопки запуска сортировок -->
-    <Button Grid.Row="1" Grid.Column="2" Content="Запустить все" Command="{Binding SortAllCommand}" Margin="3" FontWeight="Bold"/>
-    <Button Grid.Row="1" Grid.Column="3" Content="Прервать" Command="{Binding CancelSortingCommand}" Margin="3" Background="LightCoral" FontWeight="Bold"/>
-    <Button Grid.Row="2" Grid.Column="0" Content="Пузырьковая" Command="{Binding BubbleSortCommand}" Margin="3" Width="120"/>
-    <Button Grid.Row="2" Grid.Column="1" Content="Быстрая" Command="{Binding QuickSortCommand}" Margin="3" Width="120"/>
-    <Button Grid.Row="2" Grid.Column="2" Content="Вставками" Command="{Binding InsertionSortCommand}" Margin="3" Width="120"/>
-    <Button Grid.Row="2" Grid.Column="3" Content="Слиянием" Command="{Binding MergeSortCommand}" Margin="3" Width="120"/>
-    <!-- Результаты сортировок -->
-    <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding BubbleSortResult}" Margin="3" TextWrapping="Wrap"/>
-    <ProgressBar Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" Value="{Binding BubbleSortProgress}" Minimum="0" Maximum="100" Height="20" Margin="3"/>
-        
-    <TextBlock Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding QuickSortResult}" Margin="3" TextWrapping="Wrap"/>
-    <ProgressBar Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" Value="{Binding QuickSortProgress}" Minimum="0" Maximum="100" Height="20" Margin="3"/>
-        
-    <TextBlock Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding InsertionSortResult}" Margin="3" TextWrapping="Wrap"/>
-    <ProgressBar Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="4" Value="{Binding InsertionSortProgress}" Minimum="0" Maximum="100" Height="20" Margin="3"/>
+    <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding OriginalArrayString}" Margin="3" TextWrapping="Wrap"/>
+    
+    <!-- === Thread версия === -->
+    <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Text="=== Thread версия (new Thread) ===" Margin="3" FontWeight="Bold" FontStyle="Italic"/>
 
-    <TextBlock Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding MergeSortResult}" Margin="3" TextWrapping="Wrap"/>
-    <ProgressBar Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="4" Value="{Binding MergeSortProgress}" Minimum="0" Maximum="100" Height="20" Margin="3"/>
-        
-    <!-- Общее число сравнений -->
-    <TextBlock Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding TotalComparisons}" Margin="3" FontWeight="Bold"/>
+    <!-- Кнопки запуска сортировок (Thread) -->
+    <Button Grid.Row="3" Grid.Column="2" Content="Запустить все (Thread)" Command="{Binding SortAllCommand}" Margin="3" FontWeight="Bold"/>
+    <Button Grid.Row="3" Grid.Column="3" Content="Прервать" Command="{Binding CancelSortingCommand}" Margin="3" Background="LightCoral" FontWeight="Bold"/>
+    <Button Grid.Row="4" Grid.Column="0" Content="Пузырьковая (Thread)" Command="{Binding BubbleSortCommand}" Margin="3" Width="140"/>
+    <Button Grid.Row="4" Grid.Column="1" Content="Быстрая (Thread)" Command="{Binding QuickSortCommand}" Margin="3" Width="140"/>
+    <Button Grid.Row="4" Grid.Column="2" Content="Вставками (Thread)" Command="{Binding InsertionSortCommand}" Margin="3" Width="140"/>
+    <Button Grid.Row="4" Grid.Column="3" Content="Слиянием (Thread)" Command="{Binding MergeSortCommand}" Margin="3" Width="140"/>
+    <!-- Результаты сортировок (Thread) -->
+    <TextBlock Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding BubbleSortResult}" Margin="3" TextWrapping="Wrap"/>
+    <ProgressBar Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" Value="{Binding BubbleSortProgress}" Minimum="0" Maximum="100" Height="20" Margin="3"/>
+
+    <TextBlock Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding QuickSortResult}" Margin="3" TextWrapping="Wrap"/>
+    <ProgressBar Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="4" Value="{Binding QuickSortProgress}" Minimum="0" Maximum="100" Height="20" Margin="3"/>
+
+    <TextBlock Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding InsertionSortResult}" Margin="3" TextWrapping="Wrap"/>
+    <ProgressBar Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="4" Value="{Binding InsertionSortProgress}" Minimum="0" Maximum="100" Height="20" Margin="3"/>
+
+    <TextBlock Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding MergeSortResult}" Margin="3" TextWrapping="Wrap"/>
+    <ProgressBar Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="4" Value="{Binding MergeSortProgress}" Minimum="0" Maximum="100" Height="20" Margin="3"/>
+    
+    <!-- === Async версия === -->
+    <TextBlock Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="4" Text="=== Async версия (async/await) ===" Margin="3" FontWeight="Bold" FontStyle="Italic"/>
+
+    <!-- Кнопки запуска сортировок (Async) -->
+    <Button Grid.Row="14" Grid.Column="2" Content="Запустить все (Async)" Command="{Binding SortAllAsyncCommand}" Margin="3" FontWeight="Bold"/>
+    <Button Grid.Row="14" Grid.Column="3" Content="Прервать" Command="{Binding CancelSortingCommand}" Margin="3" Background="LightCoral" FontWeight="Bold"/>
+    <Button Grid.Row="15" Grid.Column="0" Content="Пузырьковая (Async)" Command="{Binding BubbleSortAsyncCommand}" Margin="3" Width="140"/>
+    <Button Grid.Row="15" Grid.Column="1" Content="Быстрая (Async)" Command="{Binding QuickSortAsyncCommand}" Margin="3" Width="140"/>
+    <Button Grid.Row="15" Grid.Column="2" Content="Вставками (Async)" Command="{Binding InsertionSortAsyncCommand}" Margin="3" Width="140"/>
+    <Button Grid.Row="15" Grid.Column="3" Content="Слиянием (Async)" Command="{Binding MergeSortAsyncCommand}" Margin="3" Width="140"/>
+    <!-- Результаты сортировок (Async) -->
+    <TextBlock Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding BubbleSortResultAsync}" Margin="3" TextWrapping="Wrap"/>
+    <ProgressBar Grid.Row="17" Grid.Column="0" Grid.ColumnSpan="4" Value="{Binding BubbleSortProgressAsync}" Minimum="0" Maximum="100" Height="20" Margin="3"/>
+
+    <TextBlock Grid.Row="18" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding QuickSortResultAsync}" Margin="3" TextWrapping="Wrap"/>
+    <ProgressBar Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="4" Value="{Binding QuickSortProgressAsync}" Minimum="0" Maximum="100" Height="20" Margin="3"/>
+
+    <TextBlock Grid.Row="20" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding InsertionSortResultAsync}" Margin="3" TextWrapping="Wrap"/>
+    <ProgressBar Grid.Row="21" Grid.Column="0" Grid.ColumnSpan="4" Value="{Binding InsertionSortProgressAsync}" Minimum="0" Maximum="100" Height="20" Margin="3"/>
+
+    <TextBlock Grid.Row="22" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding MergeSortResultAsync}" Margin="3" TextWrapping="Wrap"/>
+    <ProgressBar Grid.Row="23" Grid.Column="0" Grid.ColumnSpan="4" Value="{Binding MergeSortProgressAsync}" Minimum="0" Maximum="100" Height="20" Margin="3"/>
+
+    <!-- Общее число сравнений и время (Thread) -->
+    <TextBlock Grid.Row="24" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding TotalComparisons}" Margin="3" FontWeight="Bold"/>
+    <TextBlock Grid.Row="25" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding TotalExecutionTime}" Margin="3" FontWeight="Bold"/>
+    
+    <!-- Общее число сравнений и время (Async) -->
+    <TextBlock Grid.Row="26" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding TotalComparisonsAsync}" Margin="3" FontWeight="Bold"/>
+    <TextBlock Grid.Row="27" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding TotalExecutionTimeAsync}" Margin="3" FontWeight="Bold"/>
     </Grid>
+    </ScrollViewer>
 </Window>

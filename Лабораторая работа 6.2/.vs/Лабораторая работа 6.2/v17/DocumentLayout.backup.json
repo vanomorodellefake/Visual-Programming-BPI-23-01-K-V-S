@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Visual-Programming-BPI-23-01-K-V-S\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3DE20B00-7D7C-423E-BC6D-C264576A0873}|\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2.csproj|c:\\users\\user\\desktop\\visual-programming-bpi-23-01-k-v-s\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\model\\arraysorter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE20B00-7D7C-423E-BC6D-C264576A0873}|\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2.csproj|solutionrelative:\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\model\\arraysorter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3DE20B00-7D7C-423E-BC6D-C264576A0873}|\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2.csproj|c:\\users\\user\\desktop\\visual-programming-bpi-23-01-k-v-s\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DE20B00-7D7C-423E-BC6D-C264576A0873}|\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2.csproj|solutionrelative:\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE20B00-7D7C-423E-BC6D-C264576A0873}|\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2.csproj|c:\\users\\user\\desktop\\visual-programming-bpi-23-01-k-v-s\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3DE20B00-7D7C-423E-BC6D-C264576A0873}|\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2.csproj|solutionrelative:\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DE20B00-7D7C-423E-BC6D-C264576A0873}|\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2.csproj|c:\\users\\user\\desktop\\visual-programming-bpi-23-01-k-v-s\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DE20B00-7D7C-423E-BC6D-C264576A0873}|\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2.csproj|solutionrelative:\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DE20B00-7D7C-423E-BC6D-C264576A0873}|\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2.csproj|c:\\users\\user\\desktop\\visual-programming-bpi-23-01-k-v-s\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3DE20B00-7D7C-423E-BC6D-C264576A0873}|\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2.csproj|solutionrelative:\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3DE20B00-7D7C-423E-BC6D-C264576A0873}|\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2.csproj|c:\\users\\user\\desktop\\visual-programming-bpi-23-01-k-v-s\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\model\\arraysorter.async.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE20B00-7D7C-423E-BC6D-C264576A0873}|\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2.csproj|solutionrelative:\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\model\\arraysorter.async.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE20B00-7D7C-423E-BC6D-C264576A0873}|\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2.csproj|c:\\users\\user\\desktop\\visual-programming-bpi-23-01-k-v-s\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\model\\arraysorter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE20B00-7D7C-423E-BC6D-C264576A0873}|\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2.csproj|solutionrelative:\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\model\\arraysorter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,32 +30,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "ArraySorter.Async.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Visual-Programming-BPI-23-01-K-V-S\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\Model\\ArraySorter.Async.cs",
+              "RelativeDocumentMoniker": "\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\Model\\ArraySorter.Async.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Visual-Programming-BPI-23-01-K-V-S\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\Model\\ArraySorter.Async.cs",
+              "RelativeToolTip": "\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\Model\\ArraySorter.Async.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T18:43:25.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ArraySorter.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Visual-Programming-BPI-23-01-K-V-S\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\Model\\ArraySorter.cs",
               "RelativeDocumentMoniker": "\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\Model\\ArraySorter.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Visual-Programming-BPI-23-01-K-V-S\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\Model\\ArraySorter.cs",
               "RelativeToolTip": "\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\Model\\ArraySorter.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAnwEoAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T17:38:44.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-01T17:38:44.252Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Visual-Programming-BPI-23-01-K-V-S\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\ViewModel\\MainViewModel.cs",
               "RelativeDocumentMoniker": "\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\ViewModel\\MainViewModel.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Visual-Programming-BPI-23-01-K-V-S\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\ViewModel\\MainViewModel.cs",
               "RelativeToolTip": "\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAADwv6oAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAD8CAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T17:36:12.14Z"
+              "WhenOpened": "2026-03-01T17:36:12.14Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -67,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Visual-Programming-BPI-23-01-K-V-S\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\MainWindow.xaml",
               "RelativeDocumentMoniker": "\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 6.2\\MainWindow.xaml",
