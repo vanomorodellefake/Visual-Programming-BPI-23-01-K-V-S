@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "MdhwxIf859I=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Student\\source\\repos\\Visual-Programming-BPI-23-01-K-V-S\\Лабораторая работа 6.2\\Лабораторая работа 6.2\\Лабораторая работа 6.2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Student\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Student\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
