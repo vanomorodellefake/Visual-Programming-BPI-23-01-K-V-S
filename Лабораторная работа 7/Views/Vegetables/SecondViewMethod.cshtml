@@ -1,0 +1,30 @@
+﻿@model Dictionary<char?, List<Лабораторная_работа_7.Models.Vegetable>>
+<h2>Отсортированные овощи (по группам)</h2>
+
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Название</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var _char in Model.Keys)
+            {
+                <tr><td>@_char</td></tr>
+                @foreach (var item in Model[_char])
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                    </tr>
+                }
+            }
+        </tbody>
+
+    </table>
+}
+else
+{
+    <h2>Список пуст!</h2>
+}
