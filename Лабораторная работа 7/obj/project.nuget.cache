@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "tlPOmlzceL4=",
+  "dgSpecHash": "zWuC1RtaNQc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Student\\Documents\\GitHub\\Visual-Programming-BPI-23-01-K-V-S\\Лабораторная работа 7\\Лабораторная работа 7.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\user\\Desktop\\Visual-Programming-BPI-23-01-K-V-S\\Лабораторная работа 7\\Лабораторная работа 7.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.24\\microsoft.windowsdesktop.app.ref.8.0.24.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.24\\microsoft.netcore.app.ref.8.0.24.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.24\\microsoft.aspnetcore.app.ref.8.0.24.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.24\\microsoft.netcore.app.host.win-x64.8.0.24.nupkg.sha512"
+  ],
   "logs": []
 }
