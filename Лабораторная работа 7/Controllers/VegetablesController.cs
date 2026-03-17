@@ -9,7 +9,7 @@ namespace Лабораторная_работа_7.Controllers
     {
         private List<Vegetable> GetVegetables()
         {
-            //return null;
+            return null;
             return new List<Vegetable>
             {
                 new Vegetable { Id = 1, Name = "Картофель" },

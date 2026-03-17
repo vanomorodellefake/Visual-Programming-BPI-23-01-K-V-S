@@ -32,40 +32,6 @@ C:\Users\Student\source\repos\vanomorodellefake\Visual-Programming-BPI-23-01-K-V
 C:\Users\Student\source\repos\vanomorodellefake\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.pdb
 C:\Users\Student\source\repos\vanomorodellefake\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.genruntimeconfig.cache
 C:\Users\Student\source\repos\vanomorodellefake\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\ref\Лабораторная работа 7.dll
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\appsettings.json
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.staticwebassets.endpoints.json
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.staticwebassets.runtime.json
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.exe
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.deps.json
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.runtimeconfig.json
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.dll
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.pdb
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.AssemblyInfoInputs.cache
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.AssemblyInfo.cs
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.csproj.CoreCompileInputs.cache
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.RazorAssemblyInfo.cache
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.RazorAssemblyInfo.cs
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.sourcelink.json
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\rjimswa.dswa.cache.json
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\scopedcss\bundle\Лабораторная работа 7.styles.css
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\scopedcss\projectbundle\Лабораторная работа 7.bundle.scp.css
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\staticwebassets.build.json.cache
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.dll
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\refint\Лабораторная работа 7.dll
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.pdb
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.genruntimeconfig.cache
-C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\ref\Лабораторная работа 7.dll
 C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\appsettings.json
 C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.staticwebassets.runtime.json
@@ -101,3 +67,37 @@ C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторна�
 C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.pdb
 C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.genruntimeconfig.cache
 C:\Users\user\Desktop\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\ref\Лабораторная работа 7.dll
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\appsettings.json
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.staticwebassets.runtime.json
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.staticwebassets.endpoints.json
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.exe
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.deps.json
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.runtimeconfig.json
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.dll
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\bin\Debug\net8.0\Лабораторная работа 7.pdb
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.AssemblyInfoInputs.cache
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.AssemblyInfo.cs
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.csproj.CoreCompileInputs.cache
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.RazorAssemblyInfo.cache
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.RazorAssemblyInfo.cs
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.sourcelink.json
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\scopedcss\bundle\Лабораторная работа 7.styles.css
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\scopedcss\projectbundle\Лабораторная работа 7.bundle.scp.css
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.dll
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\refint\Лабораторная работа 7.dll
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.pdb
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\Лабораторная работа 7.genruntimeconfig.cache
+C:\Users\Student\Documents\GitHub\Visual-Programming-BPI-23-01-K-V-S\Лабораторная работа 7\obj\Debug\net8.0\ref\Лабораторная работа 7.dll
